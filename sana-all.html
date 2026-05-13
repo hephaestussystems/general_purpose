@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sana Connector Intelligence Report — All 124 Connectors</title>
+<title>Sana Connector Intelligence Report — All 100 Connectors</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -35,651 +35,527 @@ a{color:inherit;text-decoration:none}
 </head>
 <body>
 <div class="hero">
-  <a href="sana-top10.html" class="back-btn">← Back to Top 10 Power Rankings</a>
-  <h1>Sana Connector Intelligence Report</h1>
-  <p class="hero-sub">Complete directory of all 124 connectors in the Sana library · May 2026</p>
-  <div class="search-wrap">
-    <input type="text" class="search-input" id="search" placeholder="Search connectors..." oninput="filterCards(this.value)">
-  </div>
+<a href="sana-top10.html" class="back-btn">← Back to Top 10 Power Rankings</a>
+<h1>Sana Connector Intelligence Report</h1>
+<p class="hero-sub">Complete directory of all 100 connectors in the Sana library · May 2026</p>
+<div class="search-wrap">
+<input type="text" class="search-input" id="search" placeholder="Search connectors..." oninput="filterCards(this.value)">
+</div>
 </div>
 <div class="grid" id="grid">
-<a href="https://support.sana.ai/en/articles/10066050-adobe-acrobat-sign-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Adobe Acrobat Sign</span></div>
-  <p class="conn-desc">eSign and document workflow automation connector</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066052-airtable-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Airtable</span></div>
-  <p class="conn-desc">Flexible relational database and project tracking</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066054-asana-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Asana</span></div>
-  <p class="conn-desc">Project and task management platform</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066042-box-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Box</span></div>
-  <p class="conn-desc">Enterprise cloud content management and file sharing</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066056-confluence-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Confluence</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-  <p class="conn-desc">Atlassian wiki and knowledge base platform</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066044-dropbox-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Dropbox</span></div>
-  <p class="conn-desc">Cloud file storage and collaboration</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066068-freshdesk-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Freshdesk</span></div>
-  <p class="conn-desc">Customer support ticketing and helpdesk</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066070-github-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">GitHub</span></div>
-  <p class="conn-desc">Code repositories, issues, and pull requests</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066072-gitlab-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">GitLab</span></div>
-  <p class="conn-desc">DevOps platform with repos, CI/CD, and issues</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066064-google-drive-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Google Drive</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-  <p class="conn-desc">Google Workspace files: Docs, Sheets, Slides, PDFs</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066074-guru-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Guru</span></div>
-  <p class="conn-desc">Internal knowledge management and wiki cards</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066082-hubspot-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">HubSpot CRM</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-  <p class="conn-desc">CRM: contacts, companies, deals, and marketing data</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066084-intercom-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Intercom</span></div>
-  <p class="conn-desc">Customer messaging and support conversations</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066076-jira-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Jira</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-  <p class="conn-desc">Atlassian issue tracker: tickets, epics, sprints</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066086-linear-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Linear</span></div>
-  <p class="conn-desc">Modern issue tracking for engineering teams</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10157004-mcp-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">MCP Connector</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-  <p class="conn-desc">Model Context Protocol — connect any MCP-compatible system</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066062-sharepoint-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Microsoft SharePoint</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-  <p class="conn-desc">Enterprise intranet, document libraries, and sites</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066060-microsoft-teams-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Microsoft Teams</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-  <p class="conn-desc">M365 team messaging, channels, and meeting transcripts</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066048-notion-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Notion</span></div>
-  <p class="conn-desc">All-in-one workspace: pages, databases, wikis</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066080-salesforce-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Salesforce</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-  <p class="conn-desc">CRM: accounts, contacts, opportunities, cases, leads</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066090-servicenow-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">ServiceNow</span></div>
-  <p class="conn-desc">ITSM: incidents, changes, CMDB, and service catalog</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066058-slack-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Slack</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-  <p class="conn-desc">Team messaging: channels, DMs, and thread history</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066088-snowflake-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Snowflake</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-  <p class="conn-desc">Cloud data warehouse — natural language to SQL</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066092-zendesk-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Zendesk</span></div>
-  <p class="conn-desc">Customer support tickets, articles, and macros</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/10066094-zoom-connector-guide" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Zoom</span></div>
-  <p class="conn-desc">Meeting recordings and transcripts</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">1Password</span></div>
-  <p class="conn-desc">Secure credential and secrets management</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Amplitude</span></div>
-  <p class="conn-desc">Product analytics and behavioral data</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Brex</span></div>
-  <p class="conn-desc">Corporate cards and spend management</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Calendly</span></div>
-  <p class="conn-desc">Scheduling and appointment automation</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">ClickUp</span></div>
-  <p class="conn-desc">Project management and productivity platform</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Coda</span></div>
-  <p class="conn-desc">Collaborative docs and spreadsheets</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Datadog</span></div>
-  <p class="conn-desc">Cloud monitoring, logs, and APM</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">DocuSign|/span></div>
-  <p class="conn-desc">Electronic signature and agreement workflows</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Figma</span></div>
-  <p class="conn-desc">Design files, prototypes, and comments</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Gong</span></div>
-  <p class="conn-desc">Revenue intelligence and call recordings</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Greenhouse</span></div>
-  <p class="conn-desc">Applicant tracking and recruiting</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">HubSpot CMS</span></div>
-  <p class="conn-desc">Content management and marketing pages</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Lever</span></div>
-  <p class="conn-desc">Talent acquisition and ATS</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Loom</span></div>
-  <p class="conn-desc">Async video messaging and screen recording</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Looker</span></div>
-  <p class="conn-desc">Business intelligence and data exploration</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Marketo</span></div>
-  <p class="conn-desc">Marketing automation and lead management</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Miro</span></div>
-  <p class="conn-desc">Digital whiteboard and visual collaboration</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Monday.com</span></div>
-  <p class="conn-desc">Work management and team collaboration</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Okta</span></div>
-  <p class="conn-desc">Identity and access management</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Outlook</span></div>
-  <p class="conn-desc">Microsoft email and calendar integration</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">PagerDuty</span></div>
-  <p class="conn-desc">Incident management and on-call scheduling</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Rippling</span></div>
-  <p class="conn-desc">HR, IT, and finance operations platform</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Roam Research</span></div>
-  <p class="conn-desc">Note-taking with bidirectional links</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Shortcut</span></div>
-  <p class="conn-desc">Agile project management for software teams</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Slack Canvas</span></div>
-  <p class="conn-desc">Persistent knowledge surfaces in Slack</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Stripe</span></div>
-  <p class="conn-desc">Payment processing and financial data</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Tableau</span></div>
-  <p class="conn-desc">Data visualization and analytics dashboards</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Testrail</span></div>
-  <p class="conn-desc">Test case management and QA tracking</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Trello</span></div>
-  <p class="conn-desc">Kanban boards and card-based project tracking</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Webflow</span></div>
-  <p class="conn-desc">No-code website builder and CMS</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Workday HCM</span></div>
-  <p class="conn-desc">Human capital management and HR records</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Workiva</span></div>
-  <p class="conn-desc">Financial reporting and compliance documents</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Wrike</span></div>
-  <p class="conn-desc">Project management and collaborative work platform</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Zapier</span></div>
-  <p class="conn-desc">Workflow automation connecting 5,000+ apps</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Zendesk Guide</span></div>
-  <p class="conn-desc">Customer-facing help center and knowledge base</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Zoho CRM</span></div>
-  <p class="conn-desc">CRM suite for sales, marketing, and support</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Agorapulse</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Agorapulse</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Aircall</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Aircall</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Algolia</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Algolia</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Amazon S3</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Amazon S3</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Bamboo HR</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Bamboo HR</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Basecamp</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Basecamp</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">BigQuery</span></div>
-  <p class="conn-desc">Pipedream-powered integration for BigQuery</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Braze</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Braze</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Capsule CRM</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Capsule CRM</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Chargebee</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Chargebee</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Clickhouse</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Clickhouse</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Close CRM</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Close CRM</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Contentful</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Contentful</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Copper CRM</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Copper CRM</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Courier</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Courier</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Customer.io</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Customer.io</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">DynamoDB</span></div>
-  <p class="conn-desc">Pipedream-powered integration for DynamoDB</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Elastic</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Elastic</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Eventbrite</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Eventbrite</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Evernote</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Evernote</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Front</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Front</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Ghost</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Ghost</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Google Analytics</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Google Analytics</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Google Calendar</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Google Calendar</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Google Chat</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Google Chat</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Helpscout</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Helpscout</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Highspot</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Highspot</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Hotjar</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Hotjar</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Hubspot Meetings</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Hubspot Meetings</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Insightly</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Insightly</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Intercom Articles</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Intercom Articles</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Jira Service Desk</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Jira Service Desk</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Klaviyo</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Klaviyo</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Mailchimp</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Mailchimp</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Microsoft OneDrive</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Microsoft OneDrive</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Mixpanel</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Mixpanel</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">MySQL</span></div>
-  <p class="conn-desc">Pipedream-powered integration for MySQL</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Netlify</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Netlify</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Netsuite</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Netsuite</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Notiion</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Notiion</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Outreach</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Outreach</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Pardot</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Pardot</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Pipedrive</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Pipedrive</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Planhat</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Planhat</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">PostgreSQL</span></div>
-  <p class="conn-desc">Pipedream-powered integration for PostgreSQL</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Pylon</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Pylon</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">QuickBooks</span></div>
-  <p class="conn-desc">Pipedream-powered integration for QuickBooks</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Rectruit CRM</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Recruit CRM</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Redis</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Redis</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Salesforce Marketing Cloud</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Salesforce Marketing Cloud</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Salesloft</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Salesloft</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Segment</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Segment</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span classss="conn-name">Sendgrid</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Sendgrid</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Shopify</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Shopify</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Slack Workflows</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Slack Workflows</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Smartsheet</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Smartsheet</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">SurveyMonkey</span></div>
-  <p class="conn-desc">Pipedream-powered integration for SurveyMonkey</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Talkdesk</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Talkdesk</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Teamwork</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Teamwork</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Typeform</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Typeform</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Whimsical</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Whimsical</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Workable</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Workable</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Zammad</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Zammad</p>
-  <span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/collections/1389607-connector-guides" target="_blank" class="conn-card">
-  <div class="conn-header"><span class="conn-name">Zendesk Sell</span></div>
-  <p class="conn-desc">Pipedream-powered integration for Zendesk Sell</p>
-  <span class="conn-link">View Guide →</span>
-</a>
+<a href="https://support.sana.ai/en/articles/617323-connector-guide-canva" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Canva</span></div>
+<p class="conn-desc">Design files and templates — list and read Canva designs</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/563343-connector-guide-workday" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Workday</span><span class="star-badge">⭐ Top 10 Pick</span></div>
+<p class="conn-desc">HR, Finance, Payroll, and Performance actions via Workday Self-Service Agent</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/563344-connector-guide-outlook-calendar" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Outlook Calendar</span><span class="star-badge">⭐ Top 10 Pick</span></div>
+<p class="conn-desc">Find events, check availability, and create or update meetings</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/563345-connector-guide-sharepoint" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Sharepoint</span><span class="star-badge">⭐ Top 10 Pick</span></div>
+<p class="conn-desc">Search and read files across SharePoint sites, drives, and document libraries</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/563347-google-drive" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Google Drive</span><span class="star-badge">⭐ Top 10 Pick</span></div>
+<p class="conn-desc">Search, create, read, and manage files across Google Workspace with 34 tools</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/563348-connector-guide-google-calendar" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Google Calendar</span></div>
+<p class="conn-desc">Find events, check availability, and create or update Google Calendar meetings</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/563349-connector-guide-outlook-email" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Outlook Email</span><span class="star-badge">⭐ Top 10 Pick</span></div>
+<p class="conn-desc">Find, draft, send, and manage emails, attachments, folders, and contacts</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/563350-connector-guide-salesforce" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Salesforce</span><span class="star-badge">⭐ Top 10 Pick</span></div>
+<p class="conn-desc">Full CRUD on Accounts, Leads, Contacts, and Opportunities — live API</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/563351-connector-guide-gmail" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Gmail</span></div>
+<p class="conn-desc">Find, draft, send, and manage Gmail messages and labels</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/596247-connector-guide-jira" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Jira</span><span class="star-badge">⭐ Top 10 Pick</span></div>
+<p class="conn-desc">Full CRUD on issues, epics, sprints, and comments</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/597891-connector-guide-google-contacts" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Google Contacts</span></div>
+<p class="conn-desc">Find saved contacts in Google Contacts</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/597927-connector-guide-box" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Box</span></div>
+<p class="conn-desc">Search and read files across your Box account</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/597920-connector-guide-google-tasks" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Google Tasks</span></div>
+<p class="conn-desc">Create, update, and manage tasks and task lists</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/597932-connector-guide-confluence" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Confluence</span></div>
+<p class="conn-desc">Search and read Confluence pages and spaces</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/597924-connector-guide-notion" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Notion</span></div>
+<p class="conn-desc">Search and read Notion pages and databases</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/598448-connector-guide-slack" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Slack</span><span class="star-badge">⭐ Top 10 Pick</span></div>
+<p class="conn-desc">Search channels, send messages, and manage Slack workspaces</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/600476-connector-guide-servicenow" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">ServiceNow</span><span class="star-badge">⭐ Top 10 Pick</span></div>
+<p class="conn-desc">Full CRUD on ServiceNow table records: incidents, changes, CMDB</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/601562-connector-guide-linear" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Linear</span></div>
+<p class="conn-desc">Search, create, and update issues across Linear teams and projects</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/602661-connector-guide-miro" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Miro</span></div>
+<p class="conn-desc">List and read Miro board content</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/602718-connector-guide-zoom" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Zoom</span></div>
+<p class="conn-desc">Find past meetings and read Zoom transcripts</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/605748-connector-guide-shortcut" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Shortcut</span></div>
+<p class="conn-desc">Search and read stories in Shortcut</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/606510-connector-guide-airtable" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Airtable</span></div>
+<p class="conn-desc">Search, create, and manage records across Airtable bases</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/606516-connector-guide-todoist" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Todoist</span></div>
+<p class="conn-desc">Create, update, and complete tasks across Todoist projects</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/606520-connector-guide-dropbox" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Dropbox</span></div>
+<p class="conn-desc">Search and read files and folders in Dropbox</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/606527-connector-guide-microsoft-onedrive" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Microsoft OneDrive</span></div>
+<p class="conn-desc">Search and read files and folders in Microsoft OneDrive</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/608079-connector-guide-typeform" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Typeform</span></div>
+<p class="conn-desc">Browse Typeform forms and review submissions</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/608599-connector-guide-zendesk" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Zendesk</span></div>
+<p class="conn-desc">Search, create, update, and delete Zendesk tickets and help articles</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/608654-connector-guide-rocketreach" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">RocketReach</span></div>
+<p class="conn-desc">Look up professional contact info and company details</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/608656-connector-guide-coda" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Coda</span></div>
+<p class="conn-desc">List Coda documents and read tables</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/610563-connector-guide-strava" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Strava</span></div>
+<p class="conn-desc">View and manage Strava activities and training stats</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/617091-connector-guide-pipedrive" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Pipedrive</span></div>
+<p class="conn-desc">Manage deals, leads, contacts, and notes in Pipedrive</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/617274-connector-guide-microsoft-planner" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Microsoft Planner</span></div>
+<p class="conn-desc">List Microsoft Planner tasks assigned to you</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/617468-connector-guide-trello" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Trello</span></div>
+<p class="conn-desc">Search, create, and manage Trello boards, lists, and cards</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/617979-connector-guide-clickup" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">ClickUp</span></div>
+<p class="conn-desc">Manage ClickUp spaces, lists, tasks, and checklists</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/618409-connector-guide-google-sheets" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Google Sheets</span></div>
+<p class="conn-desc">Full read-write on Google Sheets — cells, rows, columns, and formulas</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/618801-connector-guide-microsoft-to-do" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Microsoft To Do</span></div>
+<p class="conn-desc">Create and manage Microsoft To Do task lists and tasks</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/620363-connector-guide-intercom" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Intercom</span></div>
+<p class="conn-desc">Read contacts and conversations in Intercom</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/623920-connector-guide-jotform" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Jotform</span></div>
+<p class="conn-desc">List Jotform forms and browse submissions</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/624155-connector-guide-harvest" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Harvest</span></div>
+<p class="conn-desc">Track time and manage projects and tasks in Harvest</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/624158-connector-guide-okta" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Okta</span></div>
+<p class="conn-desc">List, create, and update users in Okta Admin</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/624168-connector-guide-docusign" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Docusign</span></div>
+<p class="conn-desc">List and read documents in DocuSign</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/624199-connector-guide-google-docs" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Google Docs</span></div>
+<p class="conn-desc">Find, read, create, and update Google Docs</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/624201-connector-guide-microsoft-excel" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Microsoft Excel</span></div>
+<p class="conn-desc">Read and update Microsoft Excel cells and generate formulas</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/624203-connector-guide-pagerduty" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">PagerDuty</span></div>
+<p class="conn-desc">Trigger, acknowledge, and resolve PagerDuty incidents</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/624268-connector-guide-github" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">GitHub</span></div>
+<p class="conn-desc">Manage GitHub repos, issues, PRs, files, and workflows</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/624270-connector-guide-gitlab" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">GitLab</span></div>
+<p class="conn-desc">Manage GitLab projects, issues, and branches</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/624341-connector-guide-bitbucket" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Bitbucket</span></div>
+<p class="conn-desc">List Bitbucket repositories and manage snippets</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/624529-connector-guide-mailchimp" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Mailchimp</span></div>
+<p class="conn-desc">Manage Mailchimp audiences, campaigns, and subscribers</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/624658-connector-guide-sentry" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Sentry</span></div>
+<p class="conn-desc">Monitor Sentry projects, issues, and error events</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/625419-connector-guide-ashby" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Ashby</span></div>
+<p class="conn-desc">Manage Ashby jobs, applications, and candidates</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/627164-connector-guide-microsoft-entra-id" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Microsoft Entra ID</span></div>
+<p class="conn-desc">Manage users and groups in Microsoft Entra ID (Azure AD)</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/627174-connector-guide-attio" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Attio</span></div>
+<p class="conn-desc">Manage contacts and deals in Attio CRM</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/627287-connector-guide-microsoft-onenote" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Microsoft OneNote</span></div>
+<p class="conn-desc">Read and manage Microsoft OneNote pages and notebooks</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/627470-asana" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Asana</span></div>
+<p class="conn-desc">Project and task management with 16 Pipedream tools</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/627504-connector-guide-microsoft-power-bi" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Microsoft Power BI</span></div>
+<p class="conn-desc">Read Microsoft Power BI reports, datasets, and dashboards</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/627509-connector-guide-monday" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Monday</span></div>
+<p class="conn-desc">Manage Monday.com boards, groups, and items</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/627538-connector-guide-hubspot" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">HubSpot</span></div>
+<p class="conn-desc">Full CRUD on HubSpot contacts, companies, deals, and tickets</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629041-connector-guide-egnyte" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Egnyte</span></div>
+<p class="conn-desc">Search and manage files in Egnyte enterprise content management</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629043-connector-guide-bamboohr" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">BambooHR</span></div>
+<p class="conn-desc">Access BambooHR employee data and HR records</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629049-connector-guide-wordpress" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">WordPress</span></div>
+<p class="conn-desc">Manage WordPress posts, pages, and content</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629053-connector-guide-visualping" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Visualping</span></div>
+<p class="conn-desc">Monitor web page changes with Visualping</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629059-connector-guide-webex" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Webex</span></div>
+<p class="conn-desc">Webex meetings and messaging integration</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629166-connector-guide-datadog" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Datadog</span></div>
+<p class="conn-desc">Monitor Datadog logs, metrics, and APM dashboards</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629172-connector-guide-postman" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Postman</span></div>
+<p class="conn-desc">Manage Postman API collections and environments</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629214-connector-guide-onelogin" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">OneLogin</span></div>
+<p class="conn-desc">Manage users and SSO in OneLogin</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629436-connector-guide-zulip" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Zulip</span></div>
+<p class="conn-desc">Team messaging and channels in Zulip</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629774-connector-guide-linkedin" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">LinkedIn</span></div>
+<p class="conn-desc">Access LinkedIn profiles and professional network data</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629786-connector-guide-calendly" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Calendly</span></div>
+<p class="conn-desc">Manage Calendly scheduling and meeting availability</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629834-connector-guide-gong" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Gong</span></div>
+<p class="conn-desc">Revenue intelligence — call recordings and deal insights from Gong</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629870-connector-guide-twilio" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Twilio</span></div>
+<p class="conn-desc">Send and manage messages and calls via Twilio</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634147-connector-guide-microsoft-teams" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Microsoft Teams</span><span class="star-badge">⭐ Top 10 Pick</span></div>
+<p class="conn-desc">Index Teams messages, channels, and meeting transcripts</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634160-connector-guide-ironclad" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Ironclad</span></div>
+<p class="conn-desc">Manage contracts and legal workflows in Ironclad</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634168-connector-guide-airbyte" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Airbyte</span></div>
+<p class="conn-desc">Manage Airbyte data integration pipelines and connectors</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634196-connector-guide-15five" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">15Five</span></div>
+<p class="conn-desc">Employee performance reviews and feedback in 15Five</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634203-connector-guide-shopify" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Shopify</span></div>
+<p class="conn-desc">Manage Shopify orders, products, and customers</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634458-connector-guide-evernote" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Evernote</span></div>
+<p class="conn-desc">Find and read notes in Evernote</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634462-connector-guide-freshdesk" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Freshdesk</span></div>
+<p class="conn-desc">Manage Freshdesk support tickets and knowledge base</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634465-connector-guide-freshservice" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Freshservice</span></div>
+<p class="conn-desc">Manage Freshservice ITSM incidents, assets, and requests</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634466-connector-guide-greenhouse" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Greenhouse</span></div>
+<p class="conn-desc">Manage Greenhouse recruiting pipeline and candidates</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634603-connector-guide-opsgenie" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Opsgenie</span></div>
+<p class="conn-desc">Manage Opsgenie alerts and on-call schedules</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634605-connector-guide-tableau" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Tableau</span></div>
+<p class="conn-desc">Read Tableau data visualizations and dashboards</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634660-connector-guide-keycloak" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Keycloak</span></div>
+<p class="conn-desc">Open-source SSO and user management via Keycloak</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634662-connector-guide-slab" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Slab</span></div>
+<p class="conn-desc">Search and read knowledge base articles in Slab</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634664-connector-guide-firebase" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Firebase</span></div>
+<p class="conn-desc">Manage Firebase app data and user records</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634667-connector-guide-supabase" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Supabase</span></div>
+<p class="conn-desc">Manage Supabase database tables and edge functions</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634716-connector-guide-procore" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Procore</span></div>
+<p class="conn-desc">Construction project management and field tools via Procore</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634724-connector-guide-guru" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Guru</span></div>
+<p class="conn-desc">Search and read knowledge cards in Guru</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634728-connector-guide-swagger" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Swagger</span></div>
+<p class="conn-desc">Read and manage API specifications in Swagger</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634796-connector-guide-dealcloud" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">DealCloud</span></div>
+<p class="conn-desc">Manage investment deals and CRM in DealCloud</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634815-connector-guide-dynamics-365-sales" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Dynamics 365 Sales</span></div>
+<p class="conn-desc">Full CRM on Dynamics 365 Sales — accounts, leads, opportunities</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/634821-dynamics-365-business-central" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Dynamics 365 Business Central</span></div>
+<p class="conn-desc">Business management and ERP via Dynamics 365 Business Central</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/636270-connector-guide-google-chat" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Google Chat</span></div>
+<p class="conn-desc">Send and manage messages in Google Chat</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/636282-connector-guide-mural" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Mural</span></div>
+<p class="conn-desc">Visual collaboration and whiteboarding in Mural</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/636288-connector-guide-zoho-crm" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Zoho CRM</span></div>
+<p class="conn-desc">Manage Zoho CRM contacts, leads, and deals</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/636294-connector-guide-azure-sql-database" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Azure SQL Database</span></div>
+<p class="conn-desc">Query and manage Azure SQL Database</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/636299-connector-guide-snowflake" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Snowflake</span></div>
+<p class="conn-desc">Natural language to SQL over Snowflake data warehouse tables</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/636394-connector-guide-databricks" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Databricks</span></div>
+<p class="conn-desc">Manage Databricks notebooks, clusters, and jobs</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/636404-connector-guide-aws" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">AWS</span></div>
+<p class="conn-desc">Manage AWS cloud resources and services</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/636416-connector-guide-google-cloud" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Google Cloud</span></div>
+<p class="conn-desc">Manage Google Cloud Platform resources and services</p>
+<span class="conn-link">View Guide →</span>
+</a>
+<a href="https://support.sana.ai/en/articles/629387-connector-guide-stripe" target="_blank" class="conn-card">
+<div class="conn-header"><span class="conn-name">Stripe</span></div>
+<p class="conn-desc">Access Stripe payment data, customers, and transactions</p>
+<span class="conn-link">View Guide →</span>
+</a>
+
 </div>
 <div class="footer">
-  Data from <a href="https://support.sana.ai" target="_blank">support.sana.ai</a> · Hephaestus Systems · May 2026<br>
-  <a href="sana-top10.html">← Back to Top 10 Power Rankings</a>
+Data from <a href="https://intercom-help.eu/workday-sana/en/collections/1389607-connector-guides" target="_blank">Sana Connector Guides</a> · Hephaestus Systems · May 2026<br>
+<a href="sana-top10.html">← Back to Top 10 Power Rankings</a>
 </div>
 <script>
-function filterCards(q) {
-  const lower = q.toLowerCase();
-  document.querySelectorAll('.conn-card').forEach(card => {
-    const text = card.textContent.toLowerCase();
-    card.classList.toggle('hidden', lower.length > 0 && !text.includes(lower));
-  });
+function filterCards(q){
+const lower=q.toLowerCase();
+document.querySelectorAll('.conn-card').forEach(card=>{
+const text=card.textContent.toLowerCase();
+card.classList.toggle('hidden',lower.length>0&&!text.includes(lower));
+});
 }
 </script>
 </body>
