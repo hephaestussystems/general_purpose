@@ -3,559 +3,770 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sana Connector Intelligence Report — All 100 Connectors</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Sana Connector Directory</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0d1117;color:#e6edf3;font-family:'Inter',sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}
-.hero{background:linear-gradient(180deg,#161b22 0%,#0d1117 100%);border-bottom:1px solid #21262d;padding:48px 24px 36px;text-align:center}
-.back-btn{display:inline-block;background:#21262d;border:1px solid #30363d;color:#58a6ff;font-size:13px;font-weight:600;padding:8px 18px;border-radius:8px;margin-bottom:20px;transition:all .2s}
-.back-btn:hover{background:#30363d}
-.hero h1{font-size:clamp(22px,4vw,40px);font-weight:700;color:#e6edf3;margin-bottom:10px}
-.hero-sub{color:#8b949e;font-size:15px}
-.search-wrap{max-width:500px;margin:24px auto 0;position:relative}
-.search-input{width:100%;background:#161b22;border:1px solid #30363d;color:#e6edf3;font-family:'Inter',sans-serif;font-size:14px;padding:12px 18px;border-radius:8px;outline:none;transition:border .2s}
-.search-input:focus{border-color:#58a6ff}
-.search-input::placeholder{color:#6e7681}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1200px;margin:32px auto;padding:0 24px}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.grid{grid-template-columns:1fr}}
-.conn-card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:18px;transition:all .2s;display:block}
-.conn-card:hover{border-color:#58a6ff;box-shadow:0 4px 20px rgba(88,166,255,.1);transform:translateY(-2px)}
-.conn-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
-.conn-name{font-weight:600;font-size:15px;color:#e6edf3}
-.star-badge{font-size:11px;background:#FFD70022;color:#FFD700;border:1px solid #FFD70044;border-radius:12px;padding:2px 8px;font-weight:600}
-.conn-desc{color:#8b949e;font-size:13px;line-height:1.5;margin-bottom:10px}
-.conn-link{font-size:12px;color:#58a6ff;font-weight:600}
-.footer{border-top:1px solid #21262d;padding:32px 24px;text-align:center;color:#6e7681;font-size:13px;line-height:2}
-.footer a{color:#58a6ff}
-.hidden{display:none!important}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; min-height: 100vh; padding: 2rem; }
+  .header { text-align: center; margin-bottom: 2rem; }
+  .header h1 { font-size: 2rem; color: #58a6ff; margin-bottom: 0.5rem; }
+  .header p { color: #8b949e; font-size: 0.9rem; }
+  .search-bar { max-width: 600px; margin: 1.5rem auto; }
+  .search-bar input { width: 100%; padding: 0.75rem 1rem; background: #161b22; border: 1px solid #30363d; border-radius: 8px; color: #e6edf3; font-size: 0.95rem; outline: none; }
+  .search-bar input:focus { border-color: #58a6ff; }
+  .table-wrap { max-width: 1100px; margin: 0 auto; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { background: #161b22; padding: 0.75rem 1rem; text-align: left; font-size: 0.85rem; color: #8b949e; border-bottom: 1px solid #30363d; white-space: nowrap; }
+  tbody tr { border-bottom: 1px solid #21262d; transition: background 0.1s; }
+  tbody tr:hover { background: #161b22; }
+  tbody td { padding: 0.65rem 1rem; font-size: 0.88rem; }
+  tbody td a { color: #58a6ff; text-decoration: none; }
+  tbody td a:hover { text-decoration: underline; }
+  .star { color: #f0c040; }
+  .footer { text-align: center; margin-top: 2rem; color: #8b949e; font-size: 0.85rem; }
+  .footer a { color: #58a6ff; text-decoration: none; }
+  .stats { text-align: center; color: #8b949e; font-size: 0.85rem; margin-bottom: 1rem; }
 </style>
 </head>
 <body>
-<div class="hero">
-<a href="sana-top10.html" class="back-btn">← Back to Top 10 Power Rankings</a>
-<h1>Sana Connector Intelligence Report</h1>
-<p class="hero-sub">Complete directory of all 100 connectors in the Sana library · May 2026</p>
-<div class="search-wrap">
-<input type="text" class="search-input" id="search" placeholder="Search connectors..." oninput="filterCards(this.value)">
+<div class="header">
+  <h1>🔗 Sana Connector Directory</h1>
+  <p>All 100 connectors · ⭐ = Top 10 for Workday enterprise · Updated 2026-05-18</p>
 </div>
+<div class="search-bar">
+  <input type="text" id="search" placeholder="Search connectors..." oninput="filterTable()">
 </div>
-<div class="grid" id="grid">
-<a href="https://support.sana.ai/en/articles/617323-connector-guide-canva" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Canva</span></div>
-<p class="conn-desc">Design files and templates — list and read Canva designs</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/563343-connector-guide-workday" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Workday</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-<p class="conn-desc">HR, Finance, Payroll, and Performance actions via Workday Self-Service Agent</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/563344-connector-guide-outlook-calendar" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Outlook Calendar</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-<p class="conn-desc">Find events, check availability, and create or update meetings</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/563345-connector-guide-sharepoint" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Sharepoint</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-<p class="conn-desc">Search and read files across SharePoint sites, drives, and document libraries</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/563347-google-drive" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Google Drive</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-<p class="conn-desc">Search, create, read, and manage files across Google Workspace with 34 tools</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/563348-connector-guide-google-calendar" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Google Calendar</span></div>
-<p class="conn-desc">Find events, check availability, and create or update Google Calendar meetings</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/563349-connector-guide-outlook-email" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Outlook Email</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-<p class="conn-desc">Find, draft, send, and manage emails, attachments, folders, and contacts</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/563350-connector-guide-salesforce" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Salesforce</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-<p class="conn-desc">Full CRUD on Accounts, Leads, Contacts, and Opportunities — live API</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/563351-connector-guide-gmail" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Gmail</span></div>
-<p class="conn-desc">Find, draft, send, and manage Gmail messages and labels</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/596247-connector-guide-jira" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Jira</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-<p class="conn-desc">Full CRUD on issues, epics, sprints, and comments</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/597891-connector-guide-google-contacts" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Google Contacts</span></div>
-<p class="conn-desc">Find saved contacts in Google Contacts</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/597927-connector-guide-box" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Box</span></div>
-<p class="conn-desc">Search and read files across your Box account</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/597920-connector-guide-google-tasks" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Google Tasks</span></div>
-<p class="conn-desc">Create, update, and manage tasks and task lists</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/597932-connector-guide-confluence" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Confluence</span></div>
-<p class="conn-desc">Search and read Confluence pages and spaces</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/597924-connector-guide-notion" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Notion</span></div>
-<p class="conn-desc">Search and read Notion pages and databases</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/598448-connector-guide-slack" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Slack</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-<p class="conn-desc">Search channels, send messages, and manage Slack workspaces</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/600476-connector-guide-servicenow" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">ServiceNow</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-<p class="conn-desc">Full CRUD on ServiceNow table records: incidents, changes, CMDB</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/601562-connector-guide-linear" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Linear</span></div>
-<p class="conn-desc">Search, create, and update issues across Linear teams and projects</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/602661-connector-guide-miro" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Miro</span></div>
-<p class="conn-desc">List and read Miro board content</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/602718-connector-guide-zoom" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Zoom</span></div>
-<p class="conn-desc">Find past meetings and read Zoom transcripts</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/605748-connector-guide-shortcut" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Shortcut</span></div>
-<p class="conn-desc">Search and read stories in Shortcut</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/606510-connector-guide-airtable" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Airtable</span></div>
-<p class="conn-desc">Search, create, and manage records across Airtable bases</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/606516-connector-guide-todoist" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Todoist</span></div>
-<p class="conn-desc">Create, update, and complete tasks across Todoist projects</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/606520-connector-guide-dropbox" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Dropbox</span></div>
-<p class="conn-desc">Search and read files and folders in Dropbox</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/606527-connector-guide-microsoft-onedrive" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Microsoft OneDrive</span></div>
-<p class="conn-desc">Search and read files and folders in Microsoft OneDrive</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/608079-connector-guide-typeform" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Typeform</span></div>
-<p class="conn-desc">Browse Typeform forms and review submissions</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/608599-connector-guide-zendesk" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Zendesk</span></div>
-<p class="conn-desc">Search, create, update, and delete Zendesk tickets and help articles</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/608654-connector-guide-rocketreach" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">RocketReach</span></div>
-<p class="conn-desc">Look up professional contact info and company details</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/608656-connector-guide-coda" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Coda</span></div>
-<p class="conn-desc">List Coda documents and read tables</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/610563-connector-guide-strava" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Strava</span></div>
-<p class="conn-desc">View and manage Strava activities and training stats</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/617091-connector-guide-pipedrive" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Pipedrive</span></div>
-<p class="conn-desc">Manage deals, leads, contacts, and notes in Pipedrive</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/617274-connector-guide-microsoft-planner" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Microsoft Planner</span></div>
-<p class="conn-desc">List Microsoft Planner tasks assigned to you</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/617468-connector-guide-trello" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Trello</span></div>
-<p class="conn-desc">Search, create, and manage Trello boards, lists, and cards</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/617979-connector-guide-clickup" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">ClickUp</span></div>
-<p class="conn-desc">Manage ClickUp spaces, lists, tasks, and checklists</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/618409-connector-guide-google-sheets" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Google Sheets</span></div>
-<p class="conn-desc">Full read-write on Google Sheets — cells, rows, columns, and formulas</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/618801-connector-guide-microsoft-to-do" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Microsoft To Do</span></div>
-<p class="conn-desc">Create and manage Microsoft To Do task lists and tasks</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/620363-connector-guide-intercom" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Intercom</span></div>
-<p class="conn-desc">Read contacts and conversations in Intercom</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/623920-connector-guide-jotform" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Jotform</span></div>
-<p class="conn-desc">List Jotform forms and browse submissions</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/624155-connector-guide-harvest" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Harvest</span></div>
-<p class="conn-desc">Track time and manage projects and tasks in Harvest</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/624158-connector-guide-okta" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Okta</span></div>
-<p class="conn-desc">List, create, and update users in Okta Admin</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/624168-connector-guide-docusign" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Docusign</span></div>
-<p class="conn-desc">List and read documents in DocuSign</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/624199-connector-guide-google-docs" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Google Docs</span></div>
-<p class="conn-desc">Find, read, create, and update Google Docs</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/624201-connector-guide-microsoft-excel" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Microsoft Excel</span></div>
-<p class="conn-desc">Read and update Microsoft Excel cells and generate formulas</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/624203-connector-guide-pagerduty" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">PagerDuty</span></div>
-<p class="conn-desc">Trigger, acknowledge, and resolve PagerDuty incidents</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/624268-connector-guide-github" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">GitHub</span></div>
-<p class="conn-desc">Manage GitHub repos, issues, PRs, files, and workflows</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/624270-connector-guide-gitlab" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">GitLab</span></div>
-<p class="conn-desc">Manage GitLab projects, issues, and branches</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/624341-connector-guide-bitbucket" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Bitbucket</span></div>
-<p class="conn-desc">List Bitbucket repositories and manage snippets</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/624529-connector-guide-mailchimp" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Mailchimp</span></div>
-<p class="conn-desc">Manage Mailchimp audiences, campaigns, and subscribers</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/624658-connector-guide-sentry" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Sentry</span></div>
-<p class="conn-desc">Monitor Sentry projects, issues, and error events</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/625419-connector-guide-ashby" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Ashby</span></div>
-<p class="conn-desc">Manage Ashby jobs, applications, and candidates</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/627164-connector-guide-microsoft-entra-id" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Microsoft Entra ID</span></div>
-<p class="conn-desc">Manage users and groups in Microsoft Entra ID (Azure AD)</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/627174-connector-guide-attio" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Attio</span></div>
-<p class="conn-desc">Manage contacts and deals in Attio CRM</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/627287-connector-guide-microsoft-onenote" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Microsoft OneNote</span></div>
-<p class="conn-desc">Read and manage Microsoft OneNote pages and notebooks</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/627470-asana" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Asana</span></div>
-<p class="conn-desc">Project and task management with 16 Pipedream tools</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/627504-connector-guide-microsoft-power-bi" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Microsoft Power BI</span></div>
-<p class="conn-desc">Read Microsoft Power BI reports, datasets, and dashboards</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/627509-connector-guide-monday" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Monday</span></div>
-<p class="conn-desc">Manage Monday.com boards, groups, and items</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/627538-connector-guide-hubspot" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">HubSpot</span></div>
-<p class="conn-desc">Full CRUD on HubSpot contacts, companies, deals, and tickets</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629041-connector-guide-egnyte" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Egnyte</span></div>
-<p class="conn-desc">Search and manage files in Egnyte enterprise content management</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629043-connector-guide-bamboohr" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">BambooHR</span></div>
-<p class="conn-desc">Access BambooHR employee data and HR records</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629049-connector-guide-wordpress" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">WordPress</span></div>
-<p class="conn-desc">Manage WordPress posts, pages, and content</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629053-connector-guide-visualping" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Visualping</span></div>
-<p class="conn-desc">Monitor web page changes with Visualping</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629059-connector-guide-webex" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Webex</span></div>
-<p class="conn-desc">Webex meetings and messaging integration</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629166-connector-guide-datadog" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Datadog</span></div>
-<p class="conn-desc">Monitor Datadog logs, metrics, and APM dashboards</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629172-connector-guide-postman" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Postman</span></div>
-<p class="conn-desc">Manage Postman API collections and environments</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629214-connector-guide-onelogin" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">OneLogin</span></div>
-<p class="conn-desc">Manage users and SSO in OneLogin</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629436-connector-guide-zulip" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Zulip</span></div>
-<p class="conn-desc">Team messaging and channels in Zulip</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629774-connector-guide-linkedin" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">LinkedIn</span></div>
-<p class="conn-desc">Access LinkedIn profiles and professional network data</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629786-connector-guide-calendly" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Calendly</span></div>
-<p class="conn-desc">Manage Calendly scheduling and meeting availability</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629834-connector-guide-gong" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Gong</span></div>
-<p class="conn-desc">Revenue intelligence — call recordings and deal insights from Gong</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629870-connector-guide-twilio" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Twilio</span></div>
-<p class="conn-desc">Send and manage messages and calls via Twilio</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634147-connector-guide-microsoft-teams" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Microsoft Teams</span><span class="star-badge">⭐ Top 10 Pick</span></div>
-<p class="conn-desc">Index Teams messages, channels, and meeting transcripts</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634160-connector-guide-ironclad" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Ironclad</span></div>
-<p class="conn-desc">Manage contracts and legal workflows in Ironclad</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634168-connector-guide-airbyte" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Airbyte</span></div>
-<p class="conn-desc">Manage Airbyte data integration pipelines and connectors</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634196-connector-guide-15five" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">15Five</span></div>
-<p class="conn-desc">Employee performance reviews and feedback in 15Five</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634203-connector-guide-shopify" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Shopify</span></div>
-<p class="conn-desc">Manage Shopify orders, products, and customers</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634458-connector-guide-evernote" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Evernote</span></div>
-<p class="conn-desc">Find and read notes in Evernote</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634462-connector-guide-freshdesk" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Freshdesk</span></div>
-<p class="conn-desc">Manage Freshdesk support tickets and knowledge base</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634465-connector-guide-freshservice" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Freshservice</span></div>
-<p class="conn-desc">Manage Freshservice ITSM incidents, assets, and requests</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634466-connector-guide-greenhouse" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Greenhouse</span></div>
-<p class="conn-desc">Manage Greenhouse recruiting pipeline and candidates</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634603-connector-guide-opsgenie" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Opsgenie</span></div>
-<p class="conn-desc">Manage Opsgenie alerts and on-call schedules</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634605-connector-guide-tableau" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Tableau</span></div>
-<p class="conn-desc">Read Tableau data visualizations and dashboards</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634660-connector-guide-keycloak" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Keycloak</span></div>
-<p class="conn-desc">Open-source SSO and user management via Keycloak</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634662-connector-guide-slab" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Slab</span></div>
-<p class="conn-desc">Search and read knowledge base articles in Slab</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634664-connector-guide-firebase" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Firebase</span></div>
-<p class="conn-desc">Manage Firebase app data and user records</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634667-connector-guide-supabase" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Supabase</span></div>
-<p class="conn-desc">Manage Supabase database tables and edge functions</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634716-connector-guide-procore" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Procore</span></div>
-<p class="conn-desc">Construction project management and field tools via Procore</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634724-connector-guide-guru" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Guru</span></div>
-<p class="conn-desc">Search and read knowledge cards in Guru</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634728-connector-guide-swagger" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Swagger</span></div>
-<p class="conn-desc">Read and manage API specifications in Swagger</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634796-connector-guide-dealcloud" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">DealCloud</span></div>
-<p class="conn-desc">Manage investment deals and CRM in DealCloud</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634815-connector-guide-dynamics-365-sales" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Dynamics 365 Sales</span></div>
-<p class="conn-desc">Full CRM on Dynamics 365 Sales — accounts, leads, opportunities</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/634821-dynamics-365-business-central" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Dynamics 365 Business Central</span></div>
-<p class="conn-desc">Business management and ERP via Dynamics 365 Business Central</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/636270-connector-guide-google-chat" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Google Chat</span></div>
-<p class="conn-desc">Send and manage messages in Google Chat</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/636282-connector-guide-mural" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Mural</span></div>
-<p class="conn-desc">Visual collaboration and whiteboarding in Mural</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/636288-connector-guide-zoho-crm" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Zoho CRM</span></div>
-<p class="conn-desc">Manage Zoho CRM contacts, leads, and deals</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/636294-connector-guide-azure-sql-database" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Azure SQL Database</span></div>
-<p class="conn-desc">Query and manage Azure SQL Database</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/636299-connector-guide-snowflake" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Snowflake</span></div>
-<p class="conn-desc">Natural language to SQL over Snowflake data warehouse tables</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/636394-connector-guide-databricks" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Databricks</span></div>
-<p class="conn-desc">Manage Databricks notebooks, clusters, and jobs</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/636404-connector-guide-aws" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">AWS</span></div>
-<p class="conn-desc">Manage AWS cloud resources and services</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/636416-connector-guide-google-cloud" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Google Cloud</span></div>
-<p class="conn-desc">Manage Google Cloud Platform resources and services</p>
-<span class="conn-link">View Guide →</span>
-</a>
-<a href="https://support.sana.ai/en/articles/629387-connector-guide-stripe" target="_blank" class="conn-card">
-<div class="conn-header"><span class="conn-name">Stripe</span></div>
-<p class="conn-desc">Access Stripe payment data, customers, and transactions</p>
-<span class="conn-link">View Guide →</span>
-</a>
+<div class="stats" id="count">Showing 100 connectors</div>
+<div class="table-wrap">
+<table id="connTable">
+  <thead>
+    <tr>
+      <th>Connector</th>
+      <th>Category</th>
+      <th>Capabilities</th>
+      <th>Tools</th>
+      <th>Guide</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+      <td>15Five</td>
+      <td>HR</td>
+      <td>3</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634196-connector-guide-15five" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Airbyte</td>
+      <td>Engineering</td>
+      <td>4</td>
+      <td>4</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634168-connector-guide-airbyte" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Airtable</td>
+      <td>Project management</td>
+      <td>6</td>
+      <td>13</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/606510-connector-guide-airtable" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Asana</td>
+      <td>Project management</td>
+      <td>7</td>
+      <td>16</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627470-asana" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Ashby</td>
+      <td>HR</td>
+      <td>6</td>
+      <td>7</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/625419-connector-guide-ashby" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Attio</td>
+      <td>Sales</td>
+      <td>7</td>
+      <td>5</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627174-connector-guide-attio" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>AWS</td>
+      <td>Engineering</td>
+      <td>8</td>
+      <td>16</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636404-connector-guide-aws" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Azure SQL Database</td>
+      <td>Engineering</td>
+      <td>1</td>
+      <td>2</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636294-connector-guide-azure-sql-database" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>BambooHR</td>
+      <td>HR</td>
+      <td>5</td>
+      <td>5</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629043-connector-guide-bamboohr" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Bitbucket</td>
+      <td>Engineering</td>
+      <td>6</td>
+      <td>7</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624341-connector-guide-bitbucket" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Box</td>
+      <td>File storage</td>
+      <td>6</td>
+      <td>6</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/597927-connector-guide-box" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Calendly</td>
+      <td>Productivity</td>
+      <td>3</td>
+      <td>6</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629786-connector-guide-calendly" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Canva</td>
+      <td>Design</td>
+      <td>2</td>
+      <td>1</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/617323-connector-guide-canva" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>ClickUp</td>
+      <td>Project management</td>
+      <td>8</td>
+      <td>50</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/617979-connector-guide-clickup" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Coda</td>
+      <td>Documents</td>
+      <td>5</td>
+      <td>12</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/608656-connector-guide-coda" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>⭐ Confluence</td>
+      <td>Documents</td>
+      <td>6</td>
+      <td>9</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/597932-connector-guide-confluence" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Databricks</td>
+      <td>Engineering</td>
+      <td>8</td>
+      <td>41</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636394-connector-guide-databricks" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Datadog</td>
+      <td>Analytics</td>
+      <td>8</td>
+      <td>11</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629166-connector-guide-datadog" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>DealCloud</td>
+      <td>Sales</td>
+      <td>4</td>
+      <td>2</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634796-connector-guide-dealcloud" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>DocuSign</td>
+      <td>Documents</td>
+      <td>2</td>
+      <td>1</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624168-connector-guide-docusign" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Dropbox</td>
+      <td>File storage</td>
+      <td>6</td>
+      <td>16</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/606520-connector-guide-dropbox" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Dynamics 365 Business Central</td>
+      <td>Sales</td>
+      <td>3</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634821-dynamics-365-business-central" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Dynamics 365 Sales</td>
+      <td>Sales</td>
+      <td>7</td>
+      <td>9</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634815-connector-guide-dynamics-365-sales" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Egnyte</td>
+      <td>File storage</td>
+      <td>4</td>
+      <td>5</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629041-connector-guide-egnyte" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Evernote</td>
+      <td>Productivity</td>
+      <td>5</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634458-connector-guide-evernote" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Firebase</td>
+      <td>Engineering</td>
+      <td>5</td>
+      <td>6</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634664-connector-guide-firebase" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Freshdesk</td>
+      <td>Support</td>
+      <td>15</td>
+      <td>43</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634462-connector-guide-freshdesk" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Freshservice</td>
+      <td>Support</td>
+      <td>7</td>
+      <td>9</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634465-connector-guide-freshservice" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>GitHub</td>
+      <td>Engineering</td>
+      <td>15</td>
+      <td>28</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624268-connector-guide-github" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>GitLab</td>
+      <td>Engineering</td>
+      <td>8</td>
+      <td>11</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624270-connector-guide-gitlab" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Gmail</td>
+      <td>Communication</td>
+      <td>10</td>
+      <td>18</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563351-connector-guide-gmail" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Gong</td>
+      <td>Sales</td>
+      <td>3</td>
+      <td>4</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629834-connector-guide-gong" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Google Calendar</td>
+      <td>Productivity</td>
+      <td>4</td>
+      <td>15</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563348-connector-guide-google-calendar" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Google Chat</td>
+      <td>Communication</td>
+      <td>4</td>
+      <td>7</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636270-connector-guide-google-chat" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Google Cloud</td>
+      <td>Engineering</td>
+      <td>7</td>
+      <td>10</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636416-connector-guide-google-cloud" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Google Contacts</td>
+      <td>Productivity</td>
+      <td>3</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/597891-connector-guide-google-contacts" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Google Docs</td>
+      <td>Documents</td>
+      <td>4</td>
+      <td>12</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624199-connector-guide-google-docs" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>⭐ Google Drive</td>
+      <td>-</td>
+      <td>12</td>
+      <td>35</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563347-connector-guide-google-drive" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Google Sheets</td>
+      <td>Documents</td>
+      <td>8</td>
+      <td>8</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/618409-connector-guide-google-sheets" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Google Tasks</td>
+      <td>Productivity</td>
+      <td>8</td>
+      <td>8</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/597920-connector-guide-google-tasks" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Greenhouse</td>
+      <td>HR</td>
+      <td>4</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634466-connector-guide-greenhouse" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Guru</td>
+      <td>Documents</td>
+      <td>2</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634724-connector-guide-guru" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Harvest</td>
+      <td>Project management</td>
+      <td>2</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624155-connector-guide-harvest" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>⭐ HubSpot</td>
+      <td>Sales</td>
+      <td>13</td>
+      <td>10</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627538-connector-guide-hubspot" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Intercom</td>
+      <td>Support</td>
+      <td>6</td>
+      <td>6</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/620363-connector-guide-intercom" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Ironclad</td>
+      <td>Productivity</td>
+      <td>3</td>
+      <td>0</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634160-connector-guide-ironclad" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>⭐ Jira</td>
+      <td>Project management</td>
+      <td>9</td>
+      <td>33</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/596247-connector-guide-jira" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Jotform</td>
+      <td>Marketing</td>
+      <td>2</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/623920-connector-guide-jotform" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Keycloak</td>
+      <td>Identity</td>
+      <td>4</td>
+      <td>4</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634660-connector-guide-keycloak" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Linear</td>
+      <td>Project management</td>
+      <td>9</td>
+      <td>16</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/601562-connector-guide-linear" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>LinkedIn</td>
+      <td>Communication</td>
+      <td>4</td>
+      <td>19</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629774-connector-guide-linkedin" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Mailchimp</td>
+      <td>Marketing</td>
+      <td>10</td>
+      <td>27</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624529-connector-guide-mailchimp" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Microsoft Entra ID</td>
+      <td>Identity</td>
+      <td>8</td>
+      <td>12</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627164-connector-guide-microsoft-entra-id" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Microsoft Excel</td>
+      <td>Documents</td>
+      <td>4</td>
+      <td>7</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624201-connector-guide-microsoft-excel" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Microsoft OneDrive</td>
+      <td>File storage</td>
+      <td>7</td>
+      <td>9</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/606527-connector-guide-microsoft-onedrive" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Microsoft OneNote</td>
+      <td>Documents</td>
+      <td>5</td>
+      <td>7</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627287-connector-guide-microsoft-onenote" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Microsoft Planner</td>
+      <td>Productivity</td>
+      <td>5</td>
+      <td>5</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/617274-connector-guide-microsoft-planner" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Microsoft Power BI</td>
+      <td>Analytics</td>
+      <td>7</td>
+      <td>15</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627504-connector-guide-microsoft-power-bi" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>⭐ Microsoft Teams</td>
+      <td>Communication</td>
+      <td>4</td>
+      <td>12</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634147-connector-guide-microsoft-teams" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Microsoft To Do</td>
+      <td>Productivity</td>
+      <td>5</td>
+      <td>5</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/618801-connector-guide-microsoft-to-do" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Miro</td>
+      <td>Design</td>
+      <td>9</td>
+      <td>14</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/602661-connector-guide-miro" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Monday</td>
+      <td>Project management</td>
+      <td>4</td>
+      <td>6</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627509-connector-guide-monday" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Mural</td>
+      <td>Design</td>
+      <td>2</td>
+      <td>2</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636282-connector-guide-mural" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Notion</td>
+      <td>Documents</td>
+      <td>6</td>
+      <td>15</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/597924-connector-guide-notion" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Okta</td>
+      <td>Identity</td>
+      <td>3</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624158-connector-guide-okta" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>OneLogin</td>
+      <td>Identity</td>
+      <td>4</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629214-connector-guide-onelogin" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Opsgenie</td>
+      <td>Engineering</td>
+      <td>4</td>
+      <td>4</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634603-connector-guide-opsgenie" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Outlook Calendar</td>
+      <td>Productivity</td>
+      <td>5</td>
+      <td>12</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563344-connector-guide-outlook-calendar" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Outlook Email</td>
+      <td>Communication</td>
+      <td>12</td>
+      <td>20</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563349-connector-guide-outlook-email" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>PagerDuty</td>
+      <td>Engineering</td>
+      <td>4</td>
+      <td>4</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624203-connector-guide-pagerduty" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Pipedrive</td>
+      <td>Sales</td>
+      <td>13</td>
+      <td>20</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/617091-connector-guide-pipedrive" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Postman</td>
+      <td>Engineering</td>
+      <td>2</td>
+      <td>2</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629172-connector-guide-postman" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Procore</td>
+      <td>Project management</td>
+      <td>5</td>
+      <td>5</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634716-connector-guide-procore" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>RocketReach</td>
+      <td>Sales</td>
+      <td>2</td>
+      <td>2</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/608654-connector-guide-rocketreach" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>⭐ Salesforce</td>
+      <td>Sales</td>
+      <td>15</td>
+      <td>9</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563350-connector-guide-salesforce" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Sentry</td>
+    2 <td>Engineering</td>
+      <td>4</td>
+      <td>4</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624658-connector-guide-sentry" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>⭐ ServiceNow</td>
+      <td>Support</td>
+      <td>6</td>
+      <td>9</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/600476-connector-guide-servicenow" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>⭐ SharePoint</td>
+      <td>-</td>
+      <td>6</td>
+      <td>18</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563345-connector-guide-sharepoint" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Shopify</td>
+      <td>Sales</td>
+      <td>11</td>
+      <td>32</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634203-connector-guide-shopify" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Shortcut</td>
+      <td>Project management</td>
+      <td>3</td>
+      <td>2</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/605748-connector-guide-shortcut" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Slab</td>
+      <td>Documents</td>
+      <td>2</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634662-connector-guide-slab" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>⭐ Slack</td>
+      <td>Communication</td>
+      <td>7</td>
+      <td>11</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/598448-connector-guide-slack" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Snowflake</td>
+      <td>Engineering</td>
+      <td>2</td>
+      <td>2</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636299-connector-guide-snowflake" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Strava</td>
+      <td>Lifestyle</td>
+      <td>5</td>
+      <td>5</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/610563-connector-guide-strava" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Stripe</td>
+      <td>Finance</td>
+      <td>19</td>
+      <td>48</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629387-connector-guide-stripe" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Supabase</td>
+      <td>Engineering</td>
+      <td>5</td>
+      <td>7</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634667-connector-guide-supabase" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Swagger</td>
+      <td>Engineering</td>
+      <td>2</td>
+      <td>2</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634728-connector-guide-swagger" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Tableau</td>
+      <td>Analytics</td>
+      <td>4</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634605-connector-guide-tableau" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Todoist</td>
+      <td>Productivity</td>
+      <td>11</td>
+      <td>42</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/606516-connector-guide-todoist" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Trello</td>
+      <td>Project management</td>
+      <td>13</td>
+      <td>29</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/617468-connector-guide-trello" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Twilio</td>
+      <td>Communication</td>
+      <td>9</td>
+      <td>15</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629870-connector-guide-twilio" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Typeform</td>
+      <td>Marketing</td>
+      <td>9</td>
+      <td>12</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/608079-connector-guide-typeform" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Visualping</td>
+      <td>Productivity</td>
+      <td>3</td>
+      <td>4</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629053-connector-guide-visualping" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Webex</td>
+      <td>Communication</td>
+      <td>4</td>
+      <td>3</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629059-connector-guide-webex" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>WordPress</td>
+      <td>Documents</td>
+      <td>2</td>
+      <td>2</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629049-connector-guide-wordpress" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>⭐ Workday</td>
+      <td>-</td>
+      <td>6</td>
+      <td>0</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563343-connector-guide-workday" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Zendesk</td>
+      <td>Support</td>
+      <td>9</td>
+      <td>22</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/608599-connector-guide-zendesk" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Zoho CRM</td>
+      <td>Sales</td>
+      <td>3</td>
+      <td>7</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636288-connector-guide-zoho-crm" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Zoom</td>
+      <td>Communication</td>
+      <td>9</td>
+      <td>24</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/602718-connector-guide-zoom" target="_blank">Guide ↗</a></td>
+    </tr>
+<tr>
+      <td>Zulip</td>
+      <td>Communication</td>
+      <td>3</td>
+      <td>1</td>
+      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629436-connector-guide-zulip" target="_blank">Guide ↗</a></td>
+    </tr>
 
+  </tbody>
+</table>
 </div>
 <div class="footer">
-Data from <a href="https://intercom-help.eu/workday-sana/en/collections/1389607-connector-guides" target="_blank">Sana Connector Guides</a> · Hephaestus Systems · May 2026<br>
-<a href="sana-top10.html">← Back to Top 10 Power Rankings</a>
+  <p><a href="sana-top10.html">← Back to Top 10</a> &nbsp;|&nbsp; Source: <a href="https://intercom-help.eu/workday-sana/en/collections/1389607-connector-guides" target="_blank">Sana Help Center</a></p>
 </div>
 <script>
-function filterCards(q){
-const lower=q.toLowerCase();
-document.querySelectorAll('.conn-card').forEach(card=>{
-const text=card.textContent.toLowerCase();
-card.classList.toggle('hidden',lower.length>0&&!text.includes(lower));
-});
+function filterTable() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const rows = document.querySelectorAll('#connTable tbody tr');
+  let visible = 0;
+  rows.forEach(r => {
+    const text = r.textContent.toLowerCase();
+    const show = text.includes(q);
+    r.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  document.getElementById('count').textContent = 'Showing ' + visible + ' connector' + (visible !== 1 ? 's' : '');
 }
 </script>
 </body>
