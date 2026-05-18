@@ -3,260 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sana Connector Power Rankings — Hephaestus Systems</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Sana Top 10 Enterprise Connectors</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0d1117;color:#e6edf3;font-family:'Inter',sans-serif;line-height:1.6;min-height:100vh}
-a{color:inherit;text-decoration:none}
-.hero{background:linear-gradient(180deg,#161b22 0%,#0d1117 100%);border-bottom:1px solid #21262d;padding:60px 24px 48px;text-align:center}
-.hero-eyebrow{color:#58a6ff;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
-.hero h1{font-size:clamp(28px,5vw,52px);font-weight:800;line-height:1.15;background:linear-gradient(135deg,#e6edf3 0%,#8b949e 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px}
-.hero-sub{color:#8b949e;font-size:16px;max-width:600px;margin:0 auto 24px}
-.date-badge{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:20px;padding:6px 16px;font-size:12px;color:#8b949e;margin-bottom:28px}
-.btn-full{display:inline-block;background:#58a6ff;color:#0d1117;font-weight:600;font-size:14px;padding:10px 24px;border-radius:8px;transition:all .2s}
-.btn-full:hover{background:#79b8ff;transform:translateY(-1px)}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1200px;margin:40px auto;padding:0 24px}
-@media(max-width:768px){.grid{grid-template-columns:1fr}}
-.card{display:block;background:#161b22;border:1px solid #30363d;border-radius:12px;padding:28px;transition:all .25s;cursor:pointer}
-.card:hover{border-color:#58a6ff;box-shadow:0 8px 32px rgba(88,166,255,.12);transform:translateY(-3px)}
-.card-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px}
-.rank-badge{font-size:22px;font-weight:800;border:2px solid;border-radius:8px;padding:4px 12px;min-width:60px;text-align:center;flex-shrink:0}
-.logo-wrap{width:48px;height:48px;flex-shrink:0}
-.logo-img{width:48px;height:48px;object-fit:contain;border-radius:8px;background:#fff;padding:4px}
-.logo-fallback{width:48px;height:48px;border-radius:8px;font-size:20px;font-weight:700;color:#0d1117;background:#58a6ff;align-items:center;justify-content:center}
-.card-title-wrap{flex:1;min-width:0}
-.connector-name{font-size:20px;font-weight:700;color:#e6edf3;margin-bottom:8px;line-height:1.2}
-.badge-row{display:flex;flex-wrap:wrap;gap:6px}
-.badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;letter-spacing:.3px}
-.tagline{color:#8b949e;font-style:italic;font-size:14px;margin-bottom:14px;line-height:1.5}
-.caps-list{list-style:none;margin-bottom:16px}
-.caps-list li{color:#c9d1d9;font-size:13px;padding:4px 0;padding-left:18px;position:relative}
-.caps-list li::before{content:"→";position:absolute;left:0;color:#58a6ff;font-size:12px}
-.why-block{background:#0d1117;border-left:3px solid #58a6ff;border-radius:0 6px 6px 0;padding:12px 16px;margin-bottom:16px}
-.why-label{font-size:11px;font-weight:700;color:#58a6ff;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
-.why-block p{color:#8b949e;font-size:13px;line-height:1.55}
-.card-footer-link{text-align:right;font-size:12px;color:#58a6ff;font-weight:600;letter-spacing:.5px}
-.footer{border-top:1px solid #21262d;padding:40px 24px;text-align:center;color:#6e7681;font-size:13px;line-height:2}
-.footer a{color:#58a6ff}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; min-height: 100vh; padding: 2rem; }
+  .header { text-align: center; margin-bottom: 3rem; }
+  .header h1 { font-size: 2rem; color: #58a6ff; margin-bottom: 0.5rem; }
+  .header p { color: #8b949e; font-size: 0.95rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1.5rem; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+  .card:hover { border-color: #58a6ff; transform: translateY(-2px); }
+  .card-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+  .rank { font-size: 1.5rem; font-weight: 700; color: #58a6ff; min-width: 2rem; }
+  .logo { width: 40px; height: 40px; border-radius: 8px; object-fit: contain; background: #21262d; padding: 4px; }
+  .card-title h3 { font-size: 1rem; font-weight: 600; color: #e6edf3; }
+  .cat-badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; display: inline-block; margin-top: 4px; font-weight: 500; }
+  .badges { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+  .badge { font-size: 0.75rem; padding: 3px 10px; border-radius: 20px; font-weight: 500; }
+  .badge.caps { background: #1f6feb20; color: #58a6ff; border: 1px solid #1f6feb40; }
+  .badge.tools { background: #23863640; color: #3fb950; border: 1px solid #23863660; }
+  .cap-list { list-style: none; padding-left: 0; margin-bottom: 1rem; }
+  .cap-list li { font-size: 0.82rem; color: #8b949e; padding: 3px 0; }
+  .cap-list li::before { content: "→ "; color: #58a6ff; }
+  .guide-link { font-size: 0.8rem; color: #58a6ff; text-decoration: none; }
+  .guide-link:hover { text-decoration: underline; }
+  .footer { text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+  .footer a { color: #58a6ff; text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
-<div class="hero">
-<div class="hero-eyebrow">Hephaestus Systems Intelligence</div>
-<h1>Sana Connector Power Rankings</h1>
-<p class="hero-sub">The 10 most valuable enterprise integrations for Workday consulting — ranked by Leila Ahmadi, CTO</p>
-<div class="date-badge">Updated May 2026 · 100 connectors analyzed</div><br>
-<a href="sana-all.html" class="btn-full">View Full Analysis — All 100 Connectors →</a>
+<div class="header">
+  <h1>🔗 Top 10 Sana Enterprise Connectors</h1>
+  <p>Ranked by enterprise adoption, indexing depth, and ROI clarity for Workday shops · Updated 2026-05-18</p>
 </div>
 <div class="grid">
 
-<a href="https://support.sana.ai/en/articles/563343-connector-guide-workday" target="_blank" class="card" style="grid-column: 1 / -1;background: linear-gradient(135deg, #1a2030 0%, #161b22 100%); border-color: #30363d;">
-<div class="card-header">
-<div class="rank-badge" style="color:#FFD700;border-color:#FFD700">👑 #1</div>
-<div class="logo-wrap"><img src="https://logo.clearbit.com/workday.com" alt="Workday" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="display:none">W</div></div>
-<div class="card-title-wrap">
-<h2 class="connector-name">Workday</h2>
-<div class="badge-row">
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Essential</span>
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Auth: Managed</span>
-</div>
-</div>
-</div>
-<p class="tagline">"The connector that turns Sana into a true Workday co-pilot — HR, Finance, Payroll, and Performance without leaving chat"</p>
-<ul class="caps-list"><li>Personal information, compensation, and benefits</li><li>Time off requests, balances, and time entry management</li><li>Performance reviews, feedback, and goal tracking</li><li>Org structure, team info, and coworker directory</li><li>Talent, referrals, and job openings</li><li>Payroll, direct deposit, and tax forms</li></ul>
-<div class="why-block">
-<div class="why-label">Why #1</div>
-<p>Workday is why enterprise clients are buying Sana. This connector bridges the conversational AI layer directly into the Workday Self-Service Agent, giving employees natural-language access to HR and finance data they already have permission to see. For a Workday consulting practice, this is always the first connector to demonstrate — it is the proof point that the entire pitch rests on.</p>
-</div>
-<div class="card-footer-link">View Sana Guide →</div>
-</a>
-<a href="https://support.sana.ai/en/articles/563345-connector-guide-sharepoint" target="_blank" class="card" style="">
-<div class="card-header">
-<div class="rank-badge" style="color:#C0C0C0;border-color:#C0C0C0">#2</div>
-<div class="logo-wrap"><img src="https://logo.clearbit.com/microsoft.com" alt="Sharepoint" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="display:none">S</div></div>
-<div class="card-title-wrap">
-<h2 class="connector-name">Sharepoint</h2>
-<div class="badge-row">
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Very High Adoption</span>
-<span class="badge" style="background:#d2992222;color:#d29922;border:1px solid #d2992244">Auth: OAuth</span>
-</div>
-</div>
-</div>
-<p class="tagline">"Search and summarize the enterprise intranet — policies, procedures, and org docs across every site and drive"</p>
-<ul class="caps-list"><li>List and search across SharePoint sites and drives</li><li>Find files and folders by site, drive, or name</li><li>Read full file content — docx, xlsx, pptx, pdf, html, and more</li><li>Sites.ReadWrite.All scope for broad enterprise access</li><li>Permission-aware access mirrors SharePoint user roles</li></ul>
-<div class="why-block">
-<div class="why-label">Why #2</div>
-<p>SharePoint is the de facto document and knowledge repository for every Fortune 500 company running Microsoft 365 — the majority. It holds the highest volume of institutional knowledge of any single system: policies, runbooks, org charts, and project docs. Full read-write scope means Sana can do more than just search — it can read and surface documents at query time.</p>
-</div>
-<div class="card-footer-link">View Sana Guide →</div>
-</a>
-<a href="https://support.sana.ai/en/articles/563349-connector-guide-outlook-email" target="_blank" class="card" style="">
-<div class="card-header">
-<div class="rank-badge" style="color:#CD7F32;border-color:#CD7F32">#3</div>
-<div class="logo-wrap"><img src="https://logo.clearbit.com/microsoft.com" alt="Outlook Email" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="display:none">O</div></div>
-<div class="card-title-wrap">
-<h2 class="connector-name">Outlook Email</h2>
-<div class="badge-row">
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Very High Adoption</span>
-<span class="badge" style="background:#d2992222;color:#d29922;border:1px solid #d2992244">Auth: OAuth</span>
-</div>
-</div>
-</div>
-<p class="tagline">"Find, draft, send, and manage emails — plus full contact management and attachment reading"</p>
-<ul class="caps-list"><li>Find emails by sender, recipient, subject, date, or folder</li><li>Draft emails for user review and send on their behalf</li><li>Read attachments: pdf, docx, images, html, txt</li><li>List and update labels and top-level folders</li><li>List, create, and update Outlook contacts</li></ul>
-<div class="why-block">
-<div class="why-label">Why #3</div>
-<p>Outlook is the email client for the majority of Fortune 500 companies. This connector enables the entire email workflow — not just reading but drafting, sending, and managing contacts. It bridges Workday employee context with the day-to-day communication layer. Missing from the previous top 10; should not have been.</p>
-</div>
-<div class="card-footer-link">View Sana Guide →</div>
-</a>
-<a href="https://support.sana.ai/en/articles/563350-connector-guide-salesforce" target="_blank" class="card" style="">
-<div class="card-header">
-<div class="rank-badge" style="color:#58a6ff;border-color:#58a6ff">#4</div>
-<div class="logo-wrap"><img src="https://logo.clearbit.com/salesforce.com" alt="Salesforce" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="display:none">S</div></div>
-<div class="card-title-wrap">
-<h2 class="connector-name">Salesforce</h2>
-<div class="badge-row">
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Very High Adoption</span>
-<span class="badge" style="background:#d2992222;color:#d29922;border:1px solid #d2992244">Auth: OAuth</span>
-</div>
-</div>
-</div>
-<p class="tagline">"Full CRUD on Accounts, Leads, Contacts, and Opportunities — live API calls, no data copy"</p>
-<ul class="caps-list"><li>Find, create, and update Accounts</li><li>Find, create, and update Leads</li><li>Find, create, and update Contacts</li><li>Find, create, and update Opportunities</li><li>Per-user OAuth mirrors Salesforce permissions exactly</li><li>Works with Sales Cloud, Service Cloud, and custom orgs</li></ul>
-<div class="why-block">
-<div class="why-label">Why #4</div>
-<p>Salesforce is the CRM of record for the majority of large enterprises. Full read-write access to the entire sales pipeline with no data copy — every query is live. Revenue teams have immediate, measurable ROI: faster deal context, enriched contacts, and pipeline updates without app-switching.</p>
-</div>
-<div class="card-footer-link">View Sana Guide →</div>
-</a>
-<a href="https://support.sana.ai/en/articles/563344-connector-guide-outlook-calendar" target="_blank" class="card" style="">
-<div class="card-header">
-<div class="rank-badge" style="color:#58a6ff;border-color:#58a6ff">#5</div>
-<div class="logo-wrap"><img src="https://logo.clearbit.com/microsoft.com" alt="Outlook Calendar" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="display:none">O</div></div>
-<div class="card-title-wrap">
-<h2 class="connector-name">Outlook Calendar</h2>
-<div class="badge-row">
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Very High Adoption</span>
-<span class="badge" style="background:#d2992222;color:#d29922;border:1px solid #d2992244">Auth: OAuth</span>
-</div>
-</div>
-</div>
-<p class="tagline">"Find events, check availability, find meeting times, and create or update calendar events"</p>
-<ul class="caps-list"><li>Find events by time, topic, or owner</li><li>Check availability for yourself or colleagues by email</li><li>Find mutual meeting times across multiple participants</li><li>Create new calendar events</li><li>Update and delete existing calendar events</li><li>12 granular Pipedream tools including recurring event support</li></ul>
-<div class="why-block">
-<div class="why-label">Why #5</div>
-<p>Outlook Calendar is universal in Microsoft shops. Full read-write: the connector not only reads the schedule but creates and updates meetings on the user's behalf. Missing from the previous top 10. Every meeting-heavy enterprise organization has an immediate use case for natural-language calendar management.</p>
-</div>
-<div class="card-footer-link">View Sana Guide →</div>
-</a>
-<a href="https://support.sana.ai/en/articles/563347-google-drive" target="_blank" class="card" style="">
-<div class="card-header">
-<div class="rank-badge" style="color:#58a6ff;border-color:#58a6ff">#6</div>
-<div class="logo-wrap"><img src="https://logo.clearbit.com/google.com" alt="Google Drive" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="display:none">G</div></div>
-<div class="card-title-wrap">
-<h2 class="connector-name">Google Drive</h2>
-<div class="badge-row">
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Very High Adoption</span>
-<span class="badge" style="background:#d2992222;color:#d29922;border:1px solid #d2992244">Auth: OAuth</span>
-</div>
-</div>
-</div>
-<p class="tagline">"12 capabilities, 34 granular tools — create, copy, update, and manage files, folders, and comments across Google Workspace"</p>
-<ul class="caps-list"><li>Find, read, create, update, and copy files</li><li>Create and manage shared drives and folders</li><li>Full comment lifecycle: create, list, update, resolve</li><li>34 granular Pipedream tools covering the entire Drive API</li><li>Centralized mode mirrors Google Drive sharing permissions</li><li>Supports My Drive, Shared Drives, and specific folder scope</li></ul>
-<div class="why-block">
-<div class="why-label">Why #6</div>
-<p>The SharePoint equivalent for Google Workspace shops. With 34 granular tools, this is one of the most capable connectors in the library — not just reading but creating, copying, moving, and managing comments. For clients running Google Workspace alongside Workday, this is the document backbone.</p>
-</div>
-<div class="card-footer-link">View Sana Guide →</div>
-</a>
-<a href="https://support.sana.ai/en/articles/634147-connector-guide-microsoft-teams" target="_blank" class="card" style="">
-<div class="card-header">
-<div class="rank-badge" style="color:#58a6ff;border-color:#58a6ff">#7</div>
-<div class="logo-wrap"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft Teams" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="display:none">M</div></div>
-<div class="card-title-wrap">
-<h2 class="connector-name">Microsoft Teams</h2>
-<div class="badge-row">
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Very High Adoption</span>
-<span class="badge" style="background:#d2992222;color:#d29922;border:1px solid #d2992244">Auth: OAuth</span>
-</div>
-</div>
-</div>
-<p class="tagline">"Index Teams messages, channels, and meeting transcripts — the M365 collaboration knowledge layer"</p>
-<ul class="caps-list"><li>Search messages across public and private Teams channels</li><li>Read channel chats and thread replies</li><li>Access meeting transcripts from recorded calls</li><li>Per-user OAuth mirrors Teams membership and channel access</li><li>Captures shared files referenced in conversations</li><li>Pairs with SharePoint for complete M365 coverage</li></ul>
-<div class="why-block">
-<div class="why-label">Why #7</div>
-<p>For Microsoft 365 organizations — the majority of Fortune 500 — Teams is where real-time collaboration and meeting knowledge live. Pairing Teams with SharePoint gives a complete M365 picture: documents plus conversations. Meeting transcripts alone represent a significant untapped knowledge source that most enterprises are not yet surfacing.</p>
-</div>
-<div class="card-footer-link">View Sana Guide →</div>
-</a>
-<a href="https://support.sana.ai/en/articles/600476-connector-guide-servicenow" target="_blank" class="card" style="">
-<div class="card-header">
-<div class="rank-badge" style="color:#58a6ff;border-color:#58a6ff">#8</div>
-<div class="logo-wrap"><img src="https://logo.clearbit.com/servicenow.com" alt="ServiceNow" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="display:none">S</div></div>
-<div class="card-title-wrap">
-<h2 class="connector-name">ServiceNow</h2>
-<div class="badge-row">
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Very High Adoption</span>
-<span class="badge" style="background:#d2992222;color:#d29922;border:1px solid #d2992244">Auth: OAuth</span>
-</div>
-</div>
-</div>
-<p class="tagline">"Full CRUD on any ServiceNow table — incidents, change requests, CMDB, knowledge base, and service catalog"</p>
-<ul class="caps-list"><li>List ServiceNow tables the user has access to</li><li>Find records in any table using filters</li><li>Create new records in any ServiceNow table</li><li>Update existing records</li><li>Delete records</li><li>Common tables: incident, change_request, problem, kb_knowledge, cmdb_ci</li></ul>
-<div class="why-block">
-<div class="why-label">Why #8</div>
-<p>ServiceNow is the ITSM platform for the majority of Fortune 500 IT organizations. Full table-level CRUD means incidents, change requests, CMDB items, and knowledge articles are all accessible and actionable. A natural bridge to Workday: HR creates an employee record in Workday, IT provisions the account through ServiceNow. A high-value Workday consulting pattern.</p>
-</div>
-<div class="card-footer-link">View Sana Guide →</div>
-</a>
-<a href="https://support.sana.ai/en/articles/598448-connector-guide-slack" target="_blank" class="card" style="">
-<div class="card-header">
-<div class="rank-badge" style="color:#58a6ff;border-color:#58a6ff">#9</div>
-<div class="logo-wrap"><img src="https://logo.clearbit.com/slack.com" alt="Slack" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="display:none">S</div></div>
-<div class="card-title-wrap">
-<h2 class="connector-name">Slack</h2>
-<div class="badge-row">
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Very High Adoption</span>
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Auth: OAuth</span>
-</div>
-</div>
-</div>
-<p class="tagline">"Search conversations, send messages, and manage channels — institutional knowledge for tech-forward enterprises"</p>
-<ul class="caps-list"><li>Search messages across channels with keyword and filter support</li><li>Send new messages and reply to threads in channels</li><li>Create new public or private channels</li><li>Update channel properties and membership</li><li>Find users by email or list users in channels</li><li>Per-user OAuth scoped to actual channel access</li></ul>
-<div class="why-block">
-<div class="why-label">Why #9</div>
-<p>Slack is the primary collaboration platform for tech-forward Fortune 500 companies — especially those not fully committed to M365. Full read-write messaging means Sana can surface institutional knowledge from channels and also take action: post updates, create channels, send notifications. High employee adoption makes it one of the fastest connectors to deploy and justify.</p>
-</div>
-<div class="card-footer-link">View Sana Guide →</div>
-</a>
-<a href="https://support.sana.ai/en/articles/596247-connector-guide-jira" target="_blank" class="card" style="">
-<div class="card-header">
-<div class="rank-badge" style="color:#58a6ff;border-color:#58a6ff">#10</div>
-<div class="logo-wrap"><img src="https://logo.clearbit.com/atlassian.com" alt="Jira" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="display:none">J</div></div>
-<div class="card-title-wrap">
-<h2 class="connector-name">Jira</h2>
-<div class="badge-row">
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Very High Adoption</span>
-<span class="badge" style="background:#3fb95022;color:#3fb950;border:1px solid #3fb95044">Auth: OAuth</span>
-</div>
-</div>
-</div>
-<p class="tagline">"Full CRUD on issues, epics, sprints, and comments — real-time project visibility without a status meeting"</p>
-<ul class="caps-list"><li>Find issues across projects using JQL-powered search</li><li>Create new issues with full field support</li><li>Update issues: assignee, status, priority, labels</li><li>List, create, and update comments on issues</li><li>List users and spaces (projects)</li><li>Managed Jira Cloud supported; OAuth mirrors project permissions</li></ul>
-<div class="why-block">
-<div class="why-label">Why #10</div>
-<p>Jira is the issue tracker for the majority of Fortune 500 engineering and product organizations. Full read-write means Sana can create issues, update status, and add comments — not just read. A natural Workday consulting pattern: Workday manages headcount and workforce planning, Jira manages what that headcount is actively building.</p>
-</div>
-<div class="card-footer-link">View Sana Guide →</div>
-</a>
+    <div class="card" onclick="window.open('https://intercom-help.eu/workday-sana/en/articles/563343-connector-guide-workday', '_blank')">
+      <div class="card-header">
+        <div class="rank">#1</div>
+        <img src="https://logo.clearbit.com/workday.com" alt="Workday" class="logo" onerror="this.style.display='none'"/>
+        <div class="card-title">
+          <h3>Workday</h3>
+          <span class="cat-badge" style="background:#58a6ff20;color:#58a6ff">Enterprise</span>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge caps">6 capabilities</span>
+        
+      </div>
+      <ul class="cap-list"><li>Personal Information & Benefits</li><li>Time & Attendance</li><li>Performance & Development</li><li><em>+3 more</em></li></ul>
+      <a href="https://intercom-help.eu/workday-sana/en/articles/563343-connector-guide-workday" class="guide-link" onclick="event.stopPropagation()">View connector guide →</a>
+    </div>
+    <div class="card" onclick="window.open('https://intercom-help.eu/workday-sana/en/articles/563345-connector-guide-sharepoint', '_blank')">
+      <div class="card-header">
+        <div class="rank">#2</div>
+        <img src="https://logo.clearbit.com/microsoft.com" alt="SharePoint" class="logo" onerror="this.style.display='none'"/>
+        <div class="card-title">
+          <h3>SharePoint</h3>
+          <span class="cat-badge" style="background:#58a6ff20;color:#58a6ff">Enterprise</span>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge caps">6 capabilities</span>
+        <span class="badge tools">18 tools</span>
+      </div>
+      <ul class="cap-list"><li>List sites</li><li>Find files</li><li>Find folders</li><li><em>+3 more</em></li></ul>
+      <a href="https://intercom-help.eu/workday-sana/en/articles/563345-connector-guide-sharepoint" class="guide-link" onclick="event.stopPropagation()">View connector guide →</a>
+    </div>
+    <div class="card" onclick="window.open('https://intercom-help.eu/workday-sana/en/articles/563347-connector-guide-google-drive', '_blank')">
+      <div class="card-header">
+        <div class="rank">#3</div>
+        <img src="https://logo.clearbit.com/google.com" alt="Google Drive" class="logo" onerror="this.style.display='none'"/>
+        <div class="card-title">
+          <h3>Google Drive</h3>
+          <span class="cat-badge" style="background:#58a6ff20;color:#58a6ff">Enterprise</span>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge caps">12 capabilities</span>
+        <span class="badge tools">35 tools</span>
+      </div>
+      <ul class="cap-list"><li>List drives</li><li>Find files</li><li>Read files</li><li><em>+9 more</em></li></ul>
+      <a href="https://intercom-help.eu/workday-sana/en/articles/563347-connector-guide-google-drive" class="guide-link" onclick="event.stopPropagation()">View connector guide →</a>
+    </div>
+    <div class="card" onclick="window.open('https://intercom-help.eu/workday-sana/en/articles/563350-connector-guide-salesforce', '_blank')">
+      <div class="card-header">
+        <div class="rank">#4</div>
+        <img src="https://logo.clearbit.com/salesforce.com" alt="Salesforce" class="logo" onerror="this.style.display='none'"/>
+        <div class="card-title">
+          <h3>Salesforce</h3>
+          <span class="cat-badge" style="background:#00A1E020;color:#00A1E0">Sales</span>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge caps">15 capabilities</span>
+        <span class="badge tools">9 tools</span>
+      </div>
+      <ul class="cap-list"><li>Find accounts</li><li>Create accounts</li><li>Update accounts</li><li><em>+12 more</em></li></ul>
+      <a href="https://intercom-help.eu/workday-sana/en/articles/563350-connector-guide-salesforce" class="guide-link" onclick="event.stopPropagation()">View connector guide →</a>
+    </div>
+    <div class="card" onclick="window.open('https://intercom-help.eu/workday-sana/en/articles/596247-connector-guide-jira', '_blank')">
+      <div class="card-header">
+        <div class="rank">#5</div>
+        <img src="https://logo.clearbit.com/atlassian.com" alt="Jira" class="logo" onerror="this.style.display='none'"/>
+        <div class="card-title">
+          <h3>Jira</h3>
+          <span class="cat-badge" style="background:#0052CC20;color:#0052CC">Project management</span>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge caps">9 capabilities</span>
+        <span class="badge tools">33 tools</span>
+      </div>
+      <ul class="cap-list"><li>List users</li><li>List spaces</li><li>Find issues</li><li><em>+6 more</em></li></ul>
+      <a href="https://intercom-help.eu/workday-sana/en/articles/596247-connector-guide-jira" class="guide-link" onclick="event.stopPropagation()">View connector guide →</a>
+    </div>
+    <div class="card" onclick="window.open('https://intercom-help.eu/workday-sana/en/articles/597932-connector-guide-confluence', '_blank')">
+      <div class="card-header">
+        <div class="rank">#6</div>
+        <img src="https://logo.clearbit.com/atlassian.com" alt="Confluence" class="logo" onerror="this.style.display='none'"/>
+        <div class="card-title">
+          <h3>Confluence</h3>
+          <span class="cat-badge" style="background:#1a73e820;color:#1a73e8">Documents</span>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge caps">6 capabilities</span>
+        <span class="badge tools">9 tools</span>
+      </div>
+      <ul class="cap-list"><li>Find pages</li><li>Read pages</li><li>Create pages</li><li><em>+3 more</em></li></ul>
+      <a href="https://intercom-help.eu/workday-sana/en/articles/597932-connector-guide-confluence" class="guide-link" onclick="event.stopPropagation()">View connector guide →</a>
+    </div>
+    <div class="card" onclick="window.open('https://intercom-help.eu/workday-sana/en/articles/598448-connector-guide-slack', '_blank')">
+      <div class="card-header">
+        <div class="rank">#7</div>
+        <img src="https://logo.clearbit.com/slack.com" alt="Slack" class="logo" onerror="this.style.display='none'"/>
+        <div class="card-title">
+          <h3>Slack</h3>
+          <span class="cat-badge" style="background:#4A154B20;color:#4A154B">Communication</span>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge caps">7 capabilities</span>
+        <span class="badge tools">11 tools</span>
+      </div>
+      <ul class="cap-list"><li>List channels</li><li>Create channels</li><li>Search messages</li><li><em>+4 more</em></li></ul>
+      <a href="https://intercom-help.eu/workday-sana/en/articles/598448-connector-guide-slack" class="guide-link" onclick="event.stopPropagation()">View connector guide →</a>
+    </div>
+    <div class="card" onclick="window.open('https://intercom-help.eu/workday-sana/en/articles/600476-connector-guide-servicenow', '_blank')">
+      <div class="card-header">
+        <div class="rank">#8</div>
+        <img src="https://logo.clearbit.com/servicenow.com" alt="ServiceNow" class="logo" onerror="this.style.display='none'"/>
+        <div class="card-title">
+          <h3>ServiceNow</h3>
+          <span class="cat-badge" style="background:#00B37420;color:#00B374">Support</span>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge caps">6 capabilities</span>
+        <span class="badge tools">9 tools</span>
+      </div>
+      <ul class="cap-list"><li>List tables</li><li>Find table records</li><li>Search records</li><li><em>+3 more</em></li></ul>
+      <a href="https://intercom-help.eu/workday-sana/en/articles/600476-connector-guide-servicenow" class="guide-link" onclick="event.stopPropagation()">View connector guide →</a>
+    </div>
+    <div class="card" onclick="window.open('https://intercom-help.eu/workday-sana/en/articles/627538-connector-guide-hubspot', '_blank')">
+      <div class="card-header">
+        <div class="rank">#9</div>
+        <img src="https://logo.clearbit.com/hubspot.com" alt="HubSpot" class="logo" onerror="this.style.display='none'"/>
+        <div class="card-title">
+          <h3>HubSpot</h3>
+          <span class="cat-badge" style="background:#00A1E020;color:#00A1E0">Sales</span>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge caps">13 capabilities</span>
+        <span class="badge tools">10 tools</span>
+      </div>
+      <ul class="cap-list"><li>Find contacts</li><li>Create contacts</li><li>Update contacts</li><li><em>+10 more</em></li></ul>
+      <a href="https://intercom-help.eu/workday-sana/en/articles/627538-connector-guide-hubspot" class="guide-link" onclick="event.stopPropagation()">View connector guide →</a>
+    </div>
+    <div class="card" onclick="window.open('https://intercom-help.eu/workday-sana/en/articles/634147-connector-guide-microsoft-teams', '_blank')">
+      <div class="card-header">
+        <div class="rank">#10</div>
+        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft Teams" class="logo" onerror="this.style.display='none'"/>
+        <div class="card-title">
+          <h3>Microsoft Teams</h3>
+          <span class="cat-badge" style="background:#4A154B20;color:#4A154B">Communication</span>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="badge caps">4 capabilities</span>
+        <span class="badge tools">12 tools</span>
+      </div>
+      <ul class="cap-list"><li>Search messages</li><li>Send messages</li><li>Create channels</li><li><em>+1 more</em></li></ul>
+      <a href="https://intercom-help.eu/workday-sana/en/articles/634147-connector-guide-microsoft-teams" class="guide-link" onclick="event.stopPropagation()">View connector guide →</a>
+    </div>
 </div>
 <div class="footer">
-Compiled by Leila Ahmadi, CTO · Hephaestus Systems<br>
-Data sourced from <a href="https://intercom-help.eu/workday-sana/en/collections/1389607-connector-guides" target="_blank">Sana Connector Guides</a> · 100 connectors analyzed · May 2026<br>
-<a href="sana-all.html">View full connector analysis →</a><br>
-<a href="sana-top10-reference.md">Download Top 10 connector details as Markdown →</a>
+  <p>Source: <a href="https://intercom-help.eu/workday-sana/en/collections/1389607-connector-guides" target="_blank">Sana Help Center</a> · Maintained by Hephaestus Systems</p>
+  <p style="margin-top:0.5rem"><a href="sana-all.html">View full connector analysis →</a> &nbsp;|&nbsp; <a href="sana-top10-reference.md">Download Top 10 connector details as Markdown →</a></p>
 </div>
 </body>
 </html>
