@@ -1,773 +1,592 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sana Connector Directory</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; min-height: 100vh; padding: 2rem; }
-  .header { text-align: center; margin-bottom: 2rem; }
-  .header h1 { font-size: 2rem; color: #58a6ff; margin-bottom: 0.5rem; }
-  .header p { color: #8b949e; font-size: 0.9rem; }
-  .search-bar { max-width: 600px; margin: 1.5rem auto; }
-  .search-bar input { width: 100%; padding: 0.75rem 1rem; background: #161b22; border: 1px solid #30363d; border-radius: 8px; color: #e6edf3; font-size: 0.95rem; outline: none; }
-  .search-bar input:focus { border-color: #58a6ff; }
-  .table-wrap { max-width: 1100px; margin: 0 auto; overflow-x: auto; }
-  table { width: 100%; border-collapse: collapse; }
-  thead th { background: #161b22; padding: 0.75rem 1rem; text-align: left; font-size: 0.85rem; color: #8b949e; border-bottom: 1px solid #30363d; white-space: nowrap; }
-  tbody tr { border-bottom: 1px solid #21262d; transition: background 0.1s; }
-  tbody tr:hover { background: #161b22; }
-  tbody td { padding: 0.65rem 1rem; font-size: 0.88rem; }
-  tbody td a { color: #58a6ff; text-decoration: none; }
-  tbody td a:hover { text-decoration: underline; }
-  .star { color: #f0c040; }
-  .footer { text-align: center; margin-top: 2rem; color: #8b949e; font-size: 0.85rem; }
-  .footer a { color: #58a6ff; text-decoration: none; }
-  .stats { text-align: center; color: #8b949e; font-size: 0.85rem; margin-bottom: 1rem; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sana Full Connector Directory (100 connectors) — Hephaestus Systems</title>
+  <meta name="description" content="Complete directory of all 100 Sana enterprise connectors with search and filter. Analysis by Hephaestus Systems.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0d1117;
+      color: #c9d1d9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      padding: 0 0 60px;
+    }
+    header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 28px 24px 22px;
+      text-align: center;
+    }
+    header .brand {
+      font-size: 13px;
+      color: #58a6ff;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-size: clamp(20px, 4vw, 30px);
+      font-weight: 700;
+      color: #f0f6fc;
+      margin-bottom: 8px;
+    }
+    header .subtitle {
+      font-size: 14px;
+      color: #8b949e;
+      margin-bottom: 6px;
+    }
+    nav.top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 14px 24px;
+      background: #0d1117;
+      border-bottom: 1px solid #21262d;
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+    nav.top-nav a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+    nav.top-nav a:hover { text-decoration: underline; }
+    .container {
+      max-width: 900px;
+      margin: 32px auto 0;
+      padding: 0 20px;
+    }
+    .search-bar {
+      width: 100%;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 15px;
+      color: #f0f6fc;
+      margin-bottom: 20px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-bar:focus {
+      border-color: #58a6ff;
+    }
+    .search-bar::placeholder { color: #6e7681; }
+    .legend {
+      font-size: 13px;
+      color: #8b949e;
+      margin-bottom: 16px;
+    }
+    .count {
+      font-size: 13px;
+      color: #6e7681;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #161b22;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #30363d;
+    }
+    thead th {
+      background: #21262d;
+      color: #8b949e;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #30363d;
+    }
+    tbody tr {
+      border-bottom: 1px solid #21262d;
+      transition: background 0.12s;
+    }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #1c2128; }
+    tbody tr.top10-row { background: #0f1e36; }
+    tbody tr.top10-row:hover { background: #152036; }
+    td {
+      padding: 11px 16px;
+      font-size: 14px;
+    }
+    .name-cell {
+      color: #f0f6fc;
+      font-weight: 500;
+    }
+    td a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    td a:hover { text-decoration: underline; }
+    .hidden { display: none; }
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 13px;
+      color: #6e7681;
+      line-height: 2;
+    }
+    footer a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-<div class="header">
-  <h1>🔗 Sana Connector Directory</h1>
-  <p>All 100 connectors · ⭐ = Top 10 for Workday enterprise · Updated 2026-05-18</p>
-</div>
-<div class="search-bar">
-  <input type="text" id="search" placeholder="Search connectors..." oninput="filterTable()">
-</div>
-<div class="stats" id="count">Showing 100 connectors</div>
-<div class="table-wrap">
-<table id="connTable">
-  <thead>
-    <tr>
-      <th>Connector</th>
-      <th>Category</th>
-      <th>Capabilities</th>
-      <th>Tools</th>
-      <th>Guide</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-      <td>15Five</td>
-      <td>HR</td>
-      <td>3</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634196-connector-guide-15five" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Airbyte</td>
-      <td>Engineering</td>
-      <td>4</td>
-      <td>4</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634168-connector-guide-airbyte" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Airtable</td>
-      <td>Project management</td>
-      <td>6</td>
-      <td>13</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/606510-connector-guide-airtable" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Asana</td>
-      <td>Project management</td>
-      <td>7</td>
-      <td>16</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627470-asana" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Ashby</td>
-      <td>HR</td>
-      <td>6</td>
-      <td>7</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/625419-connector-guide-ashby" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Attio</td>
-      <td>Sales</td>
-      <td>7</td>
-      <td>5</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627174-connector-guide-attio" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>AWS</td>
-      <td>Engineering</td>
-      <td>8</td>
-      <td>16</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636404-connector-guide-aws" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Azure SQL Database</td>
-      <td>Engineering</td>
-      <td>1</td>
-      <td>2</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636294-connector-guide-azure-sql-database" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>BambooHR</td>
-      <td>HR</td>
-      <td>5</td>
-      <td>5</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629043-connector-guide-bamboohr" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Bitbucket</td>
-      <td>Engineering</td>
-      <td>6</td>
-      <td>7</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624341-connector-guide-bitbucket" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Box</td>
-      <td>File storage</td>
-      <td>6</td>
-      <td>6</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/597927-connector-guide-box" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Calendly</td>
-      <td>Productivity</td>
-      <td>3</td>
-      <td>6</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629786-connector-guide-calendly" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Canva</td>
-      <td>Design</td>
-      <td>2</td>
-      <td>1</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/617323-connector-guide-canva" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>ClickUp</td>
-      <td>Project management</td>
-      <td>8</td>
-      <td>50</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/617979-connector-guide-clickup" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Coda</td>
-      <td>Documents</td>
-      <td>5</td>
-      <td>12</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/608656-connector-guide-coda" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>⭐ Confluence</td>
-      <td>Documents</td>
-      <td>6</td>
-      <td>9</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/597932-connector-guide-confluence" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Databricks</td>
-      <td>Engineering</td>
-      <td>8</td>
-      <td>41</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636394-connector-guide-databricks" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Datadog</td>
-      <td>Analytics</td>
-      <td>8</td>
-      <td>11</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629166-connector-guide-datadog" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>DealCloud</td>
-      <td>Sales</td>
-      <td>4</td>
-      <td>2</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634796-connector-guide-dealcloud" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>DocuSign</td>
-      <td>Documents</td>
-      <td>2</td>
-      <td>1</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624168-connector-guide-docusign" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Dropbox</td>
-      <td>File storage</td>
-      <td>6</td>
-      <td>16</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/606520-connector-guide-dropbox" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Dynamics 365 Business Central</td>
-      <td>Sales</td>
-      <td>3</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634821-dynamics-365-business-central" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Dynamics 365 Sales</td>
-      <td>Sales</td>
-      <td>7</td>
-      <td>9</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634815-connector-guide-dynamics-365-sales" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Egnyte</td>
-      <td>File storage</td>
-      <td>4</td>
-      <td>5</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629041-connector-guide-egnyte" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Evernote</td>
-      <td>Productivity</td>
-      <td>5</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634458-connector-guide-evernote" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Firebase</td>
-      <td>Engineering</td>
-      <td>5</td>
-      <td>6</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634664-connector-guide-firebase" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Freshdesk</td>
-      <td>Support</td>
-      <td>15</td>
-      <td>43</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634462-connector-guide-freshdesk" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Freshservice</td>
-      <td>Support</td>
-      <td>7</td>
-      <td>9</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634465-connector-guide-freshservice" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>GitHub</td>
-      <td>Engineering</td>
-      <td>15</td>
-      <td>28</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624268-connector-guide-github" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>GitLab</td>
-      <td>Engineering</td>
-      <td>8</td>
-      <td>11</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624270-connector-guide-gitlab" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Gmail</td>
-      <td>Communication</td>
-      <td>10</td>
-      <td>18</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563351-connector-guide-gmail" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Gong</td>
-      <td>Sales</td>
-      <td>3</td>
-      <td>4</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629834-connector-guide-gong" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Google Calendar</td>
-      <td>Productivity</td>
-      <td>4</td>
-      <td>15</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563348-connector-guide-google-calendar" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Google Chat</td>
-      <td>Communication</td>
-      <td>4</td>
-      <td>7</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636270-connector-guide-google-chat" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Google Cloud</td>
-      <td>Engineering</td>
-      <td>7</td>
-      <td>10</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636416-connector-guide-google-cloud" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Google Contacts</td>
-      <td>Productivity</td>
-      <td>3</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/597891-connector-guide-google-contacts" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Google Docs</td>
-      <td>Documents</td>
-      <td>4</td>
-      <td>12</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624199-connector-guide-google-docs" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>⭐ Google Drive</td>
-      <td>-</td>
-      <td>12</td>
-      <td>35</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563347-connector-guide-google-drive" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Google Sheets</td>
-      <td>Documents</td>
-      <td>8</td>
-      <td>8</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/618409-connector-guide-google-sheets" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Google Tasks</td>
-      <td>Productivity</td>
-      <td>8</td>
-      <td>8</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/597920-connector-guide-google-tasks" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Greenhouse</td>
-      <td>HR</td>
-      <td>4</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634466-connector-guide-greenhouse" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Guru</td>
-      <td>Documents</td>
-      <td>2</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634724-connector-guide-guru" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Harvest</td>
-      <td>Project management</td>
-      <td>2</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624155-connector-guide-harvest" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>⭐ HubSpot</td>
-      <td>Sales</td>
-      <td>13</td>
-      <td>10</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627538-connector-guide-hubspot" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Intercom</td>
-      <td>Support</td>
-      <td>6</td>
-      <td>6</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/620363-connector-guide-intercom" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Ironclad</td>
-      <td>Productivity</td>
-      <td>3</td>
-      <td>0</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634160-connector-guide-ironclad" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>⭐ Jira</td>
-      <td>Project management</td>
-      <td>9</td>
-      <td>33</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/596247-connector-guide-jira" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Jotform</td>
-      <td>Marketing</td>
-      <td>2</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/623920-connector-guide-jotform" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Keycloak</td>
-      <td>Identity</td>
-      <td>4</td>
-      <td>4</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634660-connector-guide-keycloak" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Linear</td>
-      <td>Project management</td>
-      <td>9</td>
-      <td>16</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/601562-connector-guide-linear" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>LinkedIn</td>
-      <td>Communication</td>
-      <td>4</td>
-      <td>19</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629774-connector-guide-linkedin" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Mailchimp</td>
-      <td>Marketing</td>
-      <td>10</td>
-      <td>27</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624529-connector-guide-mailchimp" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Microsoft Entra ID</td>
-      <td>Identity</td>
-      <td>8</td>
-      <td>12</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627164-connector-guide-microsoft-entra-id" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Microsoft Excel</td>
-      <td>Documents</td>
-      <td>4</td>
-      <td>7</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624201-connector-guide-microsoft-excel" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Microsoft OneDrive</td>
-      <td>File storage</td>
-      <td>7</td>
-      <td>9</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/606527-connector-guide-microsoft-onedrive" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Microsoft OneNote</td>
-      <td>Documents</td>
-      <td>5</td>
-      <td>7</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627287-connector-guide-microsoft-onenote" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Microsoft Planner</td>
-      <td>Productivity</td>
-      <td>5</td>
-      <td>5</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/617274-connector-guide-microsoft-planner" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Microsoft Power BI</td>
-      <td>Analytics</td>
-      <td>7</td>
-      <td>15</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627504-connector-guide-microsoft-power-bi" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>⭐ Microsoft Teams</td>
-      <td>Communication</td>
-      <td>4</td>
-      <td>12</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634147-connector-guide-microsoft-teams" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Microsoft To Do</td>
-      <td>Productivity</td>
-      <td>5</td>
-      <td>5</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/618801-connector-guide-microsoft-to-do" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Miro</td>
-      <td>Design</td>
-      <td>9</td>
-      <td>14</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/602661-connector-guide-miro" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Monday</td>
-      <td>Project management</td>
-      <td>4</td>
-      <td>6</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/627509-connector-guide-monday" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Mural</td>
-      <td>Design</td>
-      <td>2</td>
-      <td>2</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636282-connector-guide-mural" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Notion</td>
-      <td>Documents</td>
-      <td>6</td>
-      <td>15</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/597924-connector-guide-notion" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Okta</td>
-      <td>Identity</td>
-      <td>3</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624158-connector-guide-okta" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>OneLogin</td>
-      <td>Identity</td>
-      <td>4</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629214-connector-guide-onelogin" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Opsgenie</td>
-      <td>Engineering</td>
-      <td>4</td>
-      <td>4</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634603-connector-guide-opsgenie" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Outlook Calendar</td>
-      <td>Productivity</td>
-      <td>5</td>
-      <td>12</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563344-connector-guide-outlook-calendar" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Outlook Email</td>
-      <td>Communication</td>
-      <td>12</td>
-      <td>20</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563349-connector-guide-outlook-email" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>PagerDuty</td>
-      <td>Engineering</td>
-      <td>4</td>
-      <td>4</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624203-connector-guide-pagerduty" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Pipedrive</td>
-      <td>Sales</td>
-      <td>13</td>
-      <td>20</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/617091-connector-guide-pipedrive" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Postman</td>
-      <td>Engineering</td>
-      <td>2</td>
-      <td>2</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629172-connector-guide-postman" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Procore</td>
-      <td>Project management</td>
-      <td>5</td>
-      <td>5</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634716-connector-guide-procore" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>RocketReach</td>
-      <td>Sales</td>
-      <td>2</td>
-      <td>2</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/608654-connector-guide-rocketreach" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>⭐ Salesforce</td>
-      <td>Sales</td>
-      <td>15</td>
-      <td>9</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563350-connector-guide-salesforce" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Sentry</td>
-    2 <td>Engineering</td>
-      <td>4</td>
-      <td>4</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/624658-connector-guide-sentry" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>⭐ ServiceNow</td>
-      <td>Support</td>
-      <td>6</td>
-      <td>9</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/600476-connector-guide-servicenow" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>⭐ SharePoint</td>
-      <td>-</td>
-      <td>6</td>
-      <td>18</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563345-connector-guide-sharepoint" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Shopify</td>
-      <td>Sales</td>
-      <td>11</td>
-      <td>32</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634203-connector-guide-shopify" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Shortcut</td>
-      <td>Project management</td>
-      <td>3</td>
-      <td>2</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/605748-connector-guide-shortcut" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Slab</td>
-      <td>Documents</td>
-      <td>2</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634662-connector-guide-slab" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>⭐ Slack</td>
-      <td>Communication</td>
-      <td>7</td>
-      <td>11</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/598448-connector-guide-slack" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Snowflake</td>
-      <td>Engineering</td>
-      <td>2</td>
-      <td>2</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636299-connector-guide-snowflake" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Strava</td>
-      <td>Lifestyle</td>
-      <td>5</td>
-      <td>5</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/610563-connector-guide-strava" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Stripe</td>
-      <td>Finance</td>
-      <td>19</td>
-      <td>48</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629387-connector-guide-stripe" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Supabase</td>
-      <td>Engineering</td>
-      <td>5</td>
-      <td>7</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634667-connector-guide-supabase" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Swagger</td>
-      <td>Engineering</td>
-      <td>2</td>
-      <td>2</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634728-connector-guide-swagger" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Tableau</td>
-      <td>Analytics</td>
-      <td>4</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/634605-connector-guide-tableau" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Todoist</td>
-      <td>Productivity</td>
-      <td>11</td>
-      <td>42</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/606516-connector-guide-todoist" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Trello</td>
-      <td>Project management</td>
-      <td>13</td>
-      <td>29</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/617468-connector-guide-trello" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Twilio</td>
-      <td>Communication</td>
-      <td>9</td>
-      <td>15</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629870-connector-guide-twilio" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Typeform</td>
-      <td>Marketing</td>
-      <td>9</td>
-      <td>12</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/608079-connector-guide-typeform" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Visualping</td>
-      <td>Productivity</td>
-      <td>3</td>
-      <td>4</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629053-connector-guide-visualping" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Webex</td>
-      <td>Communication</td>
-      <td>4</td>
-      <td>3</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629059-connector-guide-webex" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>WordPress</td>
-      <td>Documents</td>
-      <td>2</td>
-      <td>2</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629049-connector-guide-wordpress" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>⭐ Workday</td>
-      <td>-</td>
-      <td>6</td>
-      <td>0</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/563343-connector-guide-workday" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Zendesk</td>
-      <td>Support</td>
-      <td>9</td>
-      <td>22</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/608599-connector-guide-zendesk" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Zoho CRM</td>
-      <td>Sales</td>
-      <td>3</td>
-      <td>7</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/636288-connector-guide-zoho-crm" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Zoom</td>
-      <td>Communication</td>
-      <td>9</td>
-      <td>24</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/602718-connector-guide-zoom" target="_blank">Guide ↗</a></td>
-    </tr>
-<tr>
-      <td>Zulip</td>
-      <td>Communication</td>
-      <td>3</td>
-      <td>1</td>
-      <td><a href="https://intercom-help.eu/workday-sana/en/articles/629436-connector-guide-zulip" target="_blank">Guide ↗</a></td>
-    </tr>
+  <header>
+    <div class="brand">Hephaestus Systems — Intelligence Brief</div>
+    <h1>Sana Full Connector Directory</h1>
+    <p class="subtitle">100 connectors &nbsp;|&nbsp; All updated 2026-05-12 (Pipedream architecture migration) &nbsp;|&nbsp; ⭐ = Top 10 recommendation</p>
+  </header>
+  <nav class="top-nav">
+    <a href="sana-top10.html">← Back to Top 10 connectors</a>
+    <a href="https://hephaestussystems.github.io/general_purpose/">← Hephaestus Systems</a>
+  </nav>
+  <div class="container">
+    <input class="search-bar" type="text" id="search" placeholder="Search connectors... (e.g. Slack, Google, Microsoft)" oninput="filterTable()">
+    <div class="legend">⭐ = Top 10 connector (highlighted in blue) &nbsp;|&nbsp; Sorted A–Z</div>
+    <div class="count" id="count">Showing 100 of 100 connectors</div>
+    <table id="connector-table">
+      <thead>
+        <tr>
+          <th>Connector</th>
+          <th>Guide</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
 
-  </tbody>
-</table>
-</div>
-<div class="footer">
-  <p><a href="sana-top10.html">← Back to Top 10</a> &nbsp;|&nbsp; Source: <a href="https://intercom-help.eu/workday-sana/en/collections/1389607-connector-guides" target="_blank">Sana Help Center</a></p>
-</div>
-<script>
-function filterTable() {
-  const q = document.getElementById('search').value.toLowerCase();
-  const rows = document.querySelectorAll('#connTable tbody tr');
-  let visible = 0;
-  rows.forEach(r => {
-    const text = r.textContent.toLowerCase();
-    const show = text.includes(q);
-    r.style.display = show ? '' : 'none';
-    if (show) visible++;
-  });
-  document.getElementById('count').textContent = 'Showing ' + visible + ' connector' + (visible !== 1 ? 's' : '');
-}
-</script>
+      <tr class="">
+        <td class="name-cell">15Five</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634196-connector-guide-15five" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Airbyte</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634168-connector-guide-airbyte" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Airtable</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/606510-connector-guide-airtable" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Asana</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/627470-asana" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Ashby</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/625419-connector-guide-ashby" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Attio</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/627174-connector-guide-attio" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">AWS</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/636404-connector-guide-aws" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Azure SQL Database</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/636294-connector-guide-azure-sql-database" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">BambooHR</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629043-connector-guide-bamboohr" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Bitbucket</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/624341-connector-guide-bitbucket" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Box</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/597927-connector-guide-box" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Calendly</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629786-connector-guide-calendly" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Canva</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/617323-connector-guide-canva" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">ClickUp</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/617979-connector-guide-clickup" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Coda</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/608656-connector-guide-coda" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Confluence</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/597932-connector-guide-confluence" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Databricks</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/636394-connector-guide-databricks" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Datadog</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629166-connector-guide-datadog" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">DealCloud</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634796-connector-guide-dealcloud" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Docusign</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/624168-connector-guide-docusign" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Dropbox</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/606520-connector-guide-dropbox" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Dynamics 365 Business Central</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634821-dynamics-365-business-central" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Dynamics 365 Sales</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634815-connector-guide-dynamics-365-sales" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Egnyte</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629041-connector-guide-egnyte" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Evernote</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634458-connector-guide-evernote" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Firebase</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634664-connector-guide-firebase" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Freshdesk</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634462-connector-guide-freshdesk" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Freshservice</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634465-connector-guide-freshservice" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">GitHub</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/624268-connector-guide-github" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">GitLab</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/624270-connector-guide-gitlab" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Gmail</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/563351-connector-guide-gmail" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Gong</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629834-connector-guide-gong" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Google Calendar</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/563348-connector-guide-google-calendar" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Google Chat</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/636270-connector-guide-google-chat" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Google Cloud</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/636416-connector-guide-google-cloud" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Google Contacts</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/597891-connector-guide-google-contacts" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Google Docs</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/624199-connector-guide-google-docs" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="top10-row">
+        <td class="name-cell">Google Drive ⭐</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/563347-connector-guide-google-drive" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Google Sheets</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/618409-connector-guide-google-sheets" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Google Tasks</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/597920-connector-guide-google-tasks" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Greenhouse</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634466-connector-guide-greenhouse" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Guru</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634724-connector-guide-guru" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Harvest</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/624155-connector-guide-harvest" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">HubSpot</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/627538-connector-guide-hubspot" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Intercom</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/620363-connector-guide-intercom" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Ironclad</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634160-connector-guide-ironclad" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="top10-row">
+        <td class="name-cell">Jira ⭐</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/596247-connector-guide-jira" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Jotform</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/623920-connector-guide-jotform" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Keycloak</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634660-connector-guide-keycloak" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Linear</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/601562-connector-guide-linear" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">LinkedIn</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629774-connector-guide-linkedin" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Mailchimp</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/624529-connector-guide-mailchimp" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Microsoft Entra ID</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/627164-connector-guide-microsoft-entra-id" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Microsoft Excel</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/624201-connector-guide-microsoft-excel" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Microsoft OneDrive</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/606527-connector-guide-microsoft-onedrive" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Microsoft OneNote</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/627287-connector-guide-microsoft-onenote" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Microsoft Planner</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/617274-connector-guide-microsoft-planner" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Microsoft Power BI</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/627504-connector-guide-microsoft-power-bi" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="top10-row">
+        <td class="name-cell">Microsoft Teams ⭐</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634147-connector-guide-microsoft-teams" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Microsoft To Do</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/618801-connector-guide-microsoft-to-do" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Miro</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/602661-connector-guide-miro" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Monday</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/627509-connector-guide-monday" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Mural</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/636282-connector-guide-mural" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Notion</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/597924-connector-guide-notion" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Okta</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/624158-connector-guide-okta" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">OneLogin</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629214-connector-guide-onelogin" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Opsgenie</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634603-connector-guide-opsgenie" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="top10-row">
+        <td class="name-cell">Outlook Calendar ⭐</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/563344-connector-guide-outlook-calendar" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="top10-row">
+        <td class="name-cell">Outlook Email ⭐</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/563349-connector-guide-outlook-email" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">PagerDuty</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/624203-connector-guide-pagerduty" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Pipedrive</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/617091-connector-guide-pipedrive" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Postman</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629172-connector-guide-postman" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Procore</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634716-connector-guide-procore" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">RocketReach</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/608654-connector-guide-rocketreach" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="top10-row">
+        <td class="name-cell">Salesforce ⭐</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/563350-connector-guide-salesforce" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Sentry</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/624658-connector-guide-sentry" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="top10-row">
+        <td class="name-cell">ServiceNow ⭐</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/600476-connector-guide-servicenow" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="top10-row">
+        <td class="name-cell">Sharepoint ⭐</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/563345-connector-guide-sharepoint" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Shopify</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634203-connector-guide-shopify" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Shortcut</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/605748-connector-guide-shortcut" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Slab</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634662-connector-guide-slab" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="top10-row">
+        <td class="name-cell">Slack ⭐</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/598448-connector-guide-slack" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Snowflake</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/636299-connector-guide-snowflake" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Strava</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/610563-connector-guide-strava" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Stripe</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629387-connector-guide-stripe" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Supabase</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634667-connector-guide-supabase" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Swagger</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634728-connector-guide-swagger" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Tableau</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/634605-connector-guide-tableau" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Todoist</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/606516-connector-guide-todoist" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Trello</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/617468-connector-guide-trello" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Twilio</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629870-connector-guide-twilio" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Typeform</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/608079-connector-guide-typeform" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Visualping</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629053-connector-guide-visualping" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Webex</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629059-connector-guide-webex" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">WordPress</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629049-connector-guide-wordpress" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="top10-row">
+        <td class="name-cell">Workday ⭐</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/563343-connector-guide-workday" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Zendesk</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/608599-connector-guide-zendesk" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Zoho CRM</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/636288-connector-guide-zoho-crm" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Zoom</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/602718-connector-guide-zoom" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      <tr class="">
+        <td class="name-cell">Zulip</td>
+        <td><a href="https://intercom-help.eu/workday-sana/en/articles/629436-connector-guide-zulip" target="_blank" rel="noopener">Sana guide →</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <footer>
+    <div>Analysis by <a href="https://hephaestussystems.github.io/general_purpose/">Hephaestus Systems</a> &nbsp;|&nbsp; Data from <a href="https://intercom-help.eu/workday-sana/en/collections/1389607-connector-guides" target="_blank" rel="noopener">Sana Help Center</a></div>
+    <div><a href="sana-top10.html">← View Top 10 connector cards</a></div>
+  </footer>
+  <script>
+    function filterTable() {
+      const q = document.getElementById('search').value.toLowerCase();
+      const rows = document.querySelectorAll('#table-body tr');
+      let visible = 0;
+      rows.forEach(row => {
+        const name = row.querySelector('.name-cell').textContent.toLowerCase();
+        if (name.includes(q)) {
+          row.classList.remove('hidden');
+          visible++;
+        } else {
+          row.classList.add('hidden');
+        }
+      });
+      document.getElementById('count').textContent = `Showing ${visible} of 100 connectors`;
+    }
+  </script>
 </body>
 </html>
