@@ -1,12 +1,10 @@
-# Sana Connector Knowledge Base — Full Content
+# Sana Connector Knowledge Base - Full Content
 
-**Last updated:** 2026-05-26
-**Total connectors:** 105
+**Last updated:** 2026-06-08
+**Total connectors:** 106
 **Source:** https://intercom-help.eu/workday-sana/en/collections/1389607-connector-guides
 
-This file contains the full article text for all 105 Sana connectors.
-Each connector section includes setup requirements, OAuth scopes, synced content types,
-search capabilities, and any connector-specific limitations.
+This file contains the full article text for all 106 Sana connectors.
 
 ---
 
@@ -64,6 +62,18 @@ Get user
 
 List user options
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in 15Five.
+
+Trigger
+
+New 1-on-1 Created
+
+New Checkin Created
+
+New High Five Received
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in 15Five when generating the key.
@@ -118,7 +128,7 @@ You&#x27;ll be asked to paste the credentials for 15Five so Sana can store them 
 
 You&#x27;ve successfully connected your 15Five account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Visualping Postman Airbyte Swagger DealCloud
+Related Articles Visualping Onelogin Guru Swagger Azure SQL Database
 
 ---
 
@@ -212,6 +222,36 @@ Sns send message
 
 Sqs send message
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in AWS.
+
+Trigger
+
+New Deleted S3 File
+
+New DynamoDB Stream Event
+
+New Inbound SES Emails
+
+New Records Returned by CloudWatch Logs Insights Query
+
+New Restored S3 File
+
+New S3 Event
+
+New S3 File
+
+New Scheduled Tasks
+
+New SNS Messages
+
+New Update to AWS RDS Database (Instant)
+
+Redshift - New Row
+
+Redshift - Updated Row
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in AWS when generating the key.
@@ -276,7 +316,7 @@ S3 search : File search is limited — the connector can only list files in a bu
 
 S3 file formats : Sana can only read the following file formats stored in S3: doc , docx , dot , dotx , dotm , xls , xlsm , xlsx , pps , ppsx , ppt , pptx , odp , ods , odt , rtf , eml , msg , htm , html , markdown , md , epub , tif , tiff , pdf , jpeg , jpg , png , gif , webp , loop , fluid , fluidframework , whiteboard , wbtx , form , note , task , page , pulse , loot , dwg , dsn .
 
-Related Articles Shortcut Postman Procore Swagger DealCloud
+Related Articles What is Sana Privacy and permissions Azure SQL Database Snowflake Google Cloud
 
 ---
 
@@ -392,7 +432,7 @@ You&#x27;ll be asked to paste the credentials for Airbyte so Sana can store them
 
 You&#x27;ve successfully connected your Airbyte account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Shortcut Visualping Postman Swagger DealCloud
+Related Articles RocketReach Zulip Slab Swagger DealCloud
 
 ---
 
@@ -473,6 +513,28 @@ Update comment
 Update field
 
 Update table
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Airtable.
+
+Trigger
+
+New Field Created (Instant)
+
+New or Modified Field (Instant)
+
+New or Modified Records (Instant)
+
+New or Modified Records in View
+
+New Record Created, Updated or Deleted (Instant)
+
+New Record(s) Created (Instant)
+
+New Records in View
+
+New, Modified or Deleted Records
 
 # Scope and permissions
 
@@ -574,7 +636,7 @@ Updating content : The connector can&#x27;t update bases and/or records.
 
 Users : The connector can&#x27;t fetch detailed user data in the workspace, only user IDs.
 
-Related Articles Salesforce ServiceNow Attio Gong Google Slides
+Related Articles Salesforce Zoom Attio Asana Procore
 
 ---
 
@@ -678,6 +740,40 @@ Search user projects
 
 Update task
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Asana.
+
+Trigger
+
+New Completed Task (Instant)
+
+New Project Added To Workspace (Instant)
+
+New Story Added To Project (Instant)
+
+New Subtask (Instant)
+
+New Tag
+
+New Tag Added To Task (Instant)
+
+New Tags added to any task (Instant)
+
+New Task (Instant)
+
+New Task Assigned in Project (Instant)
+
+New Task Field Updated In Project (Instant)
+
+New Task Updated In Project (Instant)
+
+New Team
+
+New User (Instant)
+
+New Workspace Added
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions.
@@ -732,7 +828,7 @@ You&#x27;ll be redirected to Asana to go through their OAuth flow. Sign in and a
 
 You&#x27;ve successfully connected your Asana account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Linear Shortcut Todoist Harvest Attio
+Related Articles Linear ClickUp GitLab Attio Procore
 
 ---
 
@@ -940,6 +1036,32 @@ Get record
 
 Update person
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Attio.
+
+Trigger
+
+New Activity Created (Instant)
+
+New List Entry (Instant)
+
+New List Entry Deleted (Instant)
+
+New List Entry Updated (Instant)
+
+New Note (Instant)
+
+New Note Updated (Instant)
+
+New Object Attribute (Instant)
+
+New Object Attribute Updated (Instant)
+
+New Record Created (Instant)
+
+New Record Updated (Instant)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions.
@@ -1008,7 +1130,7 @@ Notes : The connector can only create new notes — not search, read, or update 
 
 Tasks : The connector cannot manage tasks.
 
-Related Articles Intercom Harvest PagerDuty Calendly Procore
+Related Articles Salesforce Airtable Trello Asana Monday
 
 ---
 
@@ -1059,6 +1181,16 @@ Execute query
 Execute raw query
 
 List table options
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Azure SQL Database.
+
+Trigger
+
+New Column
+
+New or Updated Row
 
 # Scope and permissions
 
@@ -1114,7 +1246,7 @@ You&#x27;ll be asked to paste the credentials for Azure SQL Database so Sana can
 
 You&#x27;ve successfully connected your Azure SQL Database account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Firebase Supabase Swagger Snowflake Databricks
+Related Articles Firebase Supabase Snowflake Databricks Confluence Data Center
 
 ---
 
@@ -1314,6 +1446,36 @@ List workspace options
 
 Update issue comment
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Bitbucket.
+
+Trigger
+
+New Branch (Instant)
+
+New Commit (Instant)
+
+New Commit Comment (Instant)
+
+New Event from any Repository
+
+New Issue (Instant)
+
+New Pipeline Event (Instant)
+
+New Pull Request (Instant)
+
+New Repository (Instant)
+
+New Repository Event (Instant)
+
+New Review Request (Instant)
+
+New Tag (Instant)
+
+New Workspace Event (Instant)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -1422,7 +1584,7 @@ Repositories : The connector can list repositories, but can&#x27;t read their me
 
 Reading snippets : The connector can list snippets and add comments, but can&#x27;t read the actual content of a snippet.
 
-Related Articles Jira Linear ClickUp GitHub Jira Data Center
+Related Articles Jira Linear ClickUp GitHub GitLab
 
 ---
 
@@ -1489,6 +1651,18 @@ Get file text
 List folder items
 
 Search content
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Box.
+
+Trigger
+
+New Event
+
+New File Event
+
+New Folder Event
 
 # Scope and permissions
 
@@ -1620,6 +1794,20 @@ List user availability schedules
 
 List webhook subscriptions
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Calendly.
+
+Trigger
+
+New Event Scheduled
+
+New Invitee Canceled
+
+New Invitee Created
+
+New Routing Form Submission Created
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions.
@@ -1674,7 +1862,7 @@ You&#x27;ll be redirected to Calendly to go through their OAuth flow. Sign in an
 
 You&#x27;ve successfully connected your Calendly account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Outlook Calendar PagerDuty Gong Procore Dynamics 365 Sales
+Related Articles Outlook Calendar PagerDuty Sentry Onelogin Greenhouse
 
 ---
 
@@ -1822,7 +2010,7 @@ You&#x27;ve successfully connected your Canva account. Click Continue to complet
 
 Read-only : The connector can only access and read your design content. It cannot create or update designs in Canva.
 
-Related Articles Strava WordPress Calendly Procore Mural
+Related Articles ServiceNow Harvest WordPress Calendly Mural
 
 ---
 
@@ -1986,6 +2174,26 @@ Update task
 
 Update task custom field
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in ClickUp.
+
+Trigger
+
+New Folder (Instant)
+
+New List (Instant)
+
+New Task (Instant)
+
+New Task Advanced (Instant)
+
+New Task Comment (Instant)
+
+New Task Comment Updated (Instant)
+
+New Updated Task (Instant)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions.
@@ -2040,7 +2248,7 @@ You&#x27;ll be redirected to ClickUp to go through their OAuth flow. Sign in and
 
 You&#x27;ve successfully connected your ClickUp account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Google Drive Jira Todoist Trello Asana
+Related Articles Google Drive Jira Trello Bitbucket Asana
 
 ---
 
@@ -2118,6 +2326,14 @@ List pages
 
 List tables
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Coda.
+
+Trigger
+
+New Row Created
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Coda when generating the key.
@@ -2182,7 +2398,7 @@ Search : The connector can only list documents you have access to; it cannot run
 
 Tables-only : Within a document, the connector only reads tables. Only basic doc metadata is exposed for the doc itself — non-table content is not accessible.
 
-Related Articles ServiceNow Google Sheets Google Docs AWS Google Slides
+Related Articles Google Docs Microsoft Excel Snowflake AWS Google Slides
 
 ---
 
@@ -2259,6 +2475,18 @@ List spaces
 Search content
 
 Update post
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Confluence.
+
+Trigger
+
+New Page or Blog Post
+
+Watch Blog Posts
+
+Watch Pages
 
 # Scope and permissions
 
@@ -2368,7 +2596,7 @@ You&#x27;ve successfully connected your Confluence account. Click Continue to co
 
 Content types : The connector can only fully read Pages . Other content types (Databases, Blogs, Whiteboards) appear in search results but only as brief metadata — Sana cannot fetch their full content.
 
-Related Articles Notion WordPress LinkedIn Shopify Confluence Data Center
+Related Articles HubSpot WordPress LinkedIn Shopify Confluence Data Center
 
 ---
 
@@ -2438,6 +2666,22 @@ Search content
 
 Update content
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Confluence Data Center.
+
+Trigger
+
+Blogpost Updated (Instant)
+
+New Blogpost Created (Instant)
+
+New Page Created (Instant)
+
+New Webhook Event (Instant)
+
+Page Updated (Instant)
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Confluence Data Center when generating the key.
@@ -2502,7 +2746,7 @@ Content types : This connector primarily reads and writes Pages and Blog posts. 
 
 Network access : Sana must be able to reach your Confluence Data Center API URL over the public internet.
 
-Related Articles Confluence Coda Ashby Swagger Jira Data Center
+Related Articles Confluence Monday Tableau Guru Jira Data Center
 
 ---
 
@@ -2698,7 +2942,7 @@ You&#x27;ll be asked to paste the credentials for Databricks so Sana can store t
 
 You&#x27;ve successfully connected your Databricks account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Zoom Ashby Azure SQL Database Snowflake Google Cloud
+Related Articles Zoom GitHub Visualping Azure SQL Database Snowflake
 
 ---
 
@@ -2779,6 +3023,14 @@ Search metrics
 Search monitors
 
 Search services
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Datadog.
+
+Trigger
+
+New Monitor Event (Instant)
 
 # Scope and permissions
 
@@ -2956,7 +3208,7 @@ Search : The connector can only list records — it cannot run a filtered search
 
 Updates : The connector can read and delete records, but cannot create or update them.
 
-Related Articles Postman Firebase Supabase Swagger Snowflake
+Related Articles Zulip Airbyte Slab Firebase Supabase
 
 ---
 
@@ -3029,6 +3281,16 @@ List recipients
 Send envelope
 
 Void envelope
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Docusign.
+
+Trigger
+
+New Change in Envelope Status
+
+New Folder
 
 # Scope and permissions
 
@@ -3110,7 +3372,7 @@ Templates : The connector does not directly support creating envelopes from Docu
 
 File upload : The connector cannot upload local files to DocuSign; envelopes can only be created from a JSON envelope definition.
 
-Related Articles Harvest WordPress Webex Calendly Procore
+Related Articles Harvest WordPress Webex Calendly Mural
 
 ---
 
@@ -3197,6 +3459,18 @@ Rename file folder
 Restore a file
 
 Search files folders
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Dropbox.
+
+Trigger
+
+New File
+
+New Folder
+
+New or Modified File or Folder
 
 # Scope and permissions
 
@@ -3402,7 +3676,7 @@ You&#x27;ll be redirected to Dynamics 365 Business Central to go through their O
 
 You&#x27;ve successfully connected your Dynamics 365 Business Central account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Microsoft Planner Microsoft Entra ID Calendly Procore Dynamics 365 Sales
+Related Articles Microsoft Planner Harvest Microsoft Entra ID Webex Dynamics 365 Sales
 
 ---
 
@@ -3482,6 +3756,42 @@ Search accounts
 
 Update appointment
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Dynamics 365 Sales.
+
+Trigger
+
+Account Ownership Changed
+
+Account Status Changed
+
+Contact Added to Account
+
+New Account Activity
+
+New Account Created
+
+New Opportunity Activity
+
+New Opportunity Created
+
+Opportunity Close Date Updated
+
+Opportunity Close Probability Updated
+
+Opportunity Contact Changed
+
+Opportunity Estimated Value Updated
+
+Opportunity Marked Won or Lost
+
+Opportunity Ownership Changed
+
+Opportunity Reopened
+
+Opportunity Stage Updated
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -3556,7 +3866,7 @@ You&#x27;ll be redirected to Dynamics 365 Sales to go through their OAuth flow. 
 
 You&#x27;ve successfully connected your Dynamics 365 Sales account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Salesforce Microsoft Planner DealCloud Dynamics 365 Business Central Upsales
+Related Articles Salesforce Microsoft Planner Gong Dynamics 365 Business Central Upsales
 
 ---
 
@@ -3617,6 +3927,16 @@ List documents
 List folders
 
 Search
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Egnyte.
+
+Trigger
+
+New File in Folder
+
+New Folder
 
 # Scope and permissions
 
@@ -3772,6 +4092,18 @@ List tag guids options
 
 Update note
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Evernote.
+
+Trigger
+
+New Note Created
+
+New Notebook Created
+
+New Tag Created
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Evernote when generating the key.
@@ -3826,7 +4158,7 @@ You&#x27;ll be asked to paste the credentials for Evernote so Sana can store the
 
 You&#x27;ve successfully connected your Evernote account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Sentry Microsoft OneNote Postman Tableau Swagger
+Related Articles Sentry Microsoft OneNote Onelogin Tableau Guru
 
 ---
 
@@ -3892,6 +4224,16 @@ Replicate event firestore
 
 Update document
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Firebase.
+
+Trigger
+
+New Child Object in a Realtime Database
+
+New Document in Firestore Collection
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Firebase when generating the key.
@@ -3946,7 +4288,7 @@ You&#x27;ll be asked to paste the credentials for Firebase so Sana can store the
 
 You&#x27;ve successfully connected your Firebase account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Coda Postman Slab Guru Swagger
+Related Articles Coda Google Docs Slab Guru Confluence Data Center
 
 ---
 
@@ -4124,6 +4466,20 @@ Update ticket
 
 Update ticket field
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Freshdesk.
+
+Trigger
+
+Contact Updated
+
+New Contact Created
+
+New Ticket Created
+
+Ticket Updated
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Freshdesk when generating the key.
@@ -4178,7 +4534,7 @@ You&#x27;ll be asked to paste the credentials for Freshdesk so Sana can store th
 
 You&#x27;ve successfully connected your Freshdesk account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Google Drive Zendesk ClickUp Intercom Freshservice
+Related Articles Google Drive Outlook Email Zendesk ClickUp Freshservice
 
 ---
 
@@ -4258,6 +4614,20 @@ Update solution article
 
 Update ticket
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Freshservice.
+
+Trigger
+
+New Solution Article
+
+New Ticket
+
+Solution Article Updated
+
+Ticket Updated
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Freshservice when generating the key.
@@ -4312,7 +4682,7 @@ You&#x27;ll be asked to paste the credentials for Freshservice so Sana can store
 
 You&#x27;ve successfully connected your Freshservice account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Zendesk Intercom Postman Freshdesk Swagger
+Related Articles Zendesk Onelogin Freshdesk Guru Azure SQL Database
 
 ---
 
@@ -4452,6 +4822,66 @@ Update project v2 item status
 
 Update pull request
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in GitHub.
+
+Trigger
+
+New Branch Created
+
+New Card in Column (Classic Projects)
+
+New Collaborator
+
+New Commit
+
+New Commit Comment
+
+New Discussion
+
+New Fork
+
+New Gist
+
+New Issue Comment
+
+New Label
+
+New Mention
+
+New Notification
+
+New or Updated Issue
+
+New or Updated Milestone
+
+New or Updated Pull Request
+
+New Organization
+
+New release
+
+New Repository
+
+New Review Request
+
+New Security Alert
+
+New Star By User
+
+New Stars
+
+New Team
+
+New Webhook Event (Instant)
+
+New Workflow Job Completed (Instant)
+
+New Workflow Run Completed (Instant)
+
+Project Item Status Changed
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -4556,7 +4986,7 @@ Issues : The connector cannot change the status of an issue, only edit other met
 
 Branches : The connector can list branches but searching them is limited.
 
-Related Articles Linear GitLab Bitbucket Ironclad Jira Data Center
+Related Articles Jira Linear GitLab Bitbucket Ironclad
 
 ---
 
@@ -4647,6 +5077,32 @@ Search issues
 Update epic
 
 Update issue
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in GitLab.
+
+Trigger
+
+New Audit Event (Instant)
+
+New Branch (Instant)
+
+New Commit (Instant)
+
+New Commit Comment (Instant)
+
+New Issue (Instant)
+
+New Mention (Instant)
+
+New Merge Request (Instant)
+
+New Milestone
+
+New Project
+
+New Review Request (Instant)
 
 # Scope and permissions
 
@@ -4748,7 +5204,7 @@ You&#x27;ve successfully connected your GitLab account. Click Continue to comple
 
 Files : The connector cannot read, create, or update files.
 
-Related Articles Jira GitHub Bitbucket Dynamics 365 Sales Jira Data Center
+Related Articles Jira GitHub Bitbucket Procore Jira Data Center
 
 ---
 
@@ -4851,6 +5307,22 @@ Send email
 Update org signature
 
 Update primary signature
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Gmail.
+
+Trigger
+
+New Attachment Received
+
+New Email Matching Search
+
+New Email Received
+
+New Labeled Email
+
+New Sent Email
 
 # Scope and permissions
 
@@ -4956,7 +5428,7 @@ Contacts : The connector does not search Google Contacts — you need to provide
 
 Label deletion : The connector can create labels and add or remove them from emails, but cannot delete label definitions from Gmail.
 
-Related Articles Outlook Email Box Trello Intercom Docusign
+Related Articles Outlook Email Trello Intercom Greenhouse Google Chat
 
 ---
 
@@ -5015,6 +5487,14 @@ List calls
 List workspace id options
 
 Retrieve transcripts of calls
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Gong.
+
+Trigger
+
+New Call
 
 # Scope and permissions
 
@@ -5122,7 +5602,7 @@ You&#x27;ll be redirected to Gong to go through their OAuth flow. Sign in and ap
 
 You&#x27;ve successfully connected your Gong account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Zoom Shortcut Zulip Twilio Tableau
+Related Articles Zoom Coda Twilio Tableau Guru
 
 ---
 
@@ -5205,6 +5685,26 @@ Update event
 Update event instance
 
 Update following instances
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Google Calendar.
+
+Trigger
+
+New Calendar Created
+
+New Cancelled Event
+
+New Created or Updated Event (Instant)
+
+New Ended Event
+
+New Event Matching a Search
+
+New Upcoming Event Alert
+
+New Upcoming Event Alert (Polling)
 
 # Scope and permissions
 
@@ -5290,7 +5790,7 @@ You&#x27;ve successfully connected your Google Calendar account. Click Continue 
 
 Contacts : The connector cannot look up your Google Contacts — participants must be specified by email address rather than by name.
 
-Related Articles Outlook Calendar Google Contacts Google Tasks Google Docs Google Chat
+Related Articles Outlook Calendar Google Contacts Google Docs Google Chat Google Slides
 
 ---
 
@@ -5355,6 +5855,18 @@ List members
 List messages
 
 List spaces
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Google Chat.
+
+Trigger
+
+New Command Used
+
+New Mention Received
+
+New Message in Space
 
 # Scope and permissions
 
@@ -5442,7 +5954,7 @@ You&#x27;ll be redirected to Google Chat to go through their OAuth flow. Sign in
 
 You&#x27;ve successfully connected your Google Chat account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Google Calendar Google Contacts Google Tasks Google Sheets Google Docs
+Related Articles Google Contacts Google Tasks Google Docs Google Cloud Google Slides
 
 ---
 
@@ -5526,6 +6038,18 @@ Search objects
 
 Switch instance boot status
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Google Cloud.
+
+Trigger
+
+BigQuery - New Row
+
+BigQuery - Query Results
+
+New Pub/Sub Messages
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Google Cloud when generating the key.
@@ -5580,7 +6104,7 @@ You&#x27;ll be asked to paste the credentials for Google Cloud so Sana can store
 
 You&#x27;ve successfully connected your Google Cloud account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Google Contacts Google Tasks Google Sheets Google Docs Google Chat
+Related Articles Google Calendar Google Contacts Google Chat Azure SQL Database Google Slides
 
 ---
 
@@ -5637,6 +6161,20 @@ Get contact
 List contacts
 
 List directory contacts
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Google Contacts.
+
+Trigger
+
+Contact Group Updated
+
+Contact Updated
+
+New Contact Created
+
+New Contact Group Created
 
 # Scope and permissions
 
@@ -5722,7 +6260,7 @@ You&#x27;ve successfully connected your Google Contacts account. Click Continue 
 
 Update : The connector does not support updating contacts in Google Contacts.
 
-Related Articles Google Calendar Google Tasks Google Sheets Google Docs Google Chat
+Related Articles Google Calendar Google Tasks Google Docs Google Chat Google Slides
 
 ---
 
@@ -5797,6 +6335,16 @@ Create document
 Append text
 
 Append image
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Google Docs.
+
+Trigger
+
+New Document Created (Instant)
+
+New or Updated Document (Instant)
 
 # Scope and permissions
 
@@ -5874,7 +6422,7 @@ Sharing : The connector cannot manage sharing permissions on documents.
 
 Comments : The connector does not support reading, creating, or updating comments.
 
-Related Articles Google Drive Google Contacts Google Tasks Google Sheets Google Slides
+Related Articles Google Drive Google Sheets Google Chat Google Cloud Google Slides
 
 ---
 
@@ -6018,6 +6566,46 @@ Update reply
 
 Update shared drive
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Google Drive.
+
+Trigger
+
+Changes to Files in Drive
+
+Changes to Specific Files
+
+Changes to Specific Files (Shared Drive)
+
+New Access Proposal
+
+New Files (Instant)
+
+New Files (Polling)
+
+New Files (Shared Drive)
+
+New or Modified Comments (Instant)
+
+New or Modified Comments (Polling)
+
+New or Modified Files (Instant)
+
+New or Modified Files (Polling)
+
+New or Modified Folders (Instant)
+
+New or Modified Folders (Polling)
+
+New Presentation (Instant)
+
+New Shared Drive
+
+New Spreadsheet (Instant)
+
+New Spreadsheet (Polling)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -6098,7 +6686,7 @@ Comments : The connector cannot determine which specific element (text, cell, ob
 
 Version history : The connector cannot access version history, so it cannot answer questions like "What changed recently in this doc, and who made the changes?".
 
-Related Articles Box OneDrive Google Sheets Google Docs Google Slides
+Related Articles Google Calendar ClickUp Google Sheets Google Docs Google Slides
 
 ---
 
@@ -6173,6 +6761,28 @@ New spreadsheet
 Read rows
 
 Update rows
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Google Sheets.
+
+Trigger
+
+New Comment
+
+New Comment (Instant)
+
+New Row Added
+
+New Row Added (Instant)
+
+New Updates
+
+New Updates (Instant)
+
+New Worksheet (Instant)
+
+New Worksheet (Polling)
 
 # Scope and permissions
 
@@ -6254,7 +6864,7 @@ Spreadsheet operations : The connector cannot change spreadsheet settings or del
 
 Comments : The connector cannot attach comments to individual cells; comments can only be added at the spreadsheet level.
 
-Related Articles Google Drive Google Contacts Microsoft Excel Google Cloud Google Slides
+Related Articles Google Drive Google Docs Microsoft Excel Google Cloud Google Slides
 
 ---
 
@@ -6338,6 +6948,14 @@ Refresh chart
 
 Replace all text
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Google Slides.
+
+Trigger
+
+New Presentation (Instant)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -6418,7 +7036,7 @@ Sharing : This connector cannot manage sharing permissions on presentations.
 
 Comments : Reading, creating, and updating comments is not supported.
 
-Related Articles Google Drive Google Contacts Google Tasks Google Sheets Google Docs
+Related Articles Google Drive Google Contacts Google Docs Google Chat Google Cloud
 
 ---
 
@@ -6494,6 +7112,16 @@ Update task
 
 Update task list
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Google Tasks.
+
+Trigger
+
+New Task Added
+
+New Task Updated
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -6564,7 +7192,7 @@ You&#x27;ll be redirected to Google Tasks to go through their OAuth flow. Sign i
 
 You&#x27;ve successfully connected your Google Tasks account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Google Calendar Google Contacts Google Sheets Google Docs Google Chat
+Related Articles Google Calendar Google Contacts Google Docs Google Chat Google Slides
 
 ---
 
@@ -6629,6 +7257,18 @@ List educations options
 List job ids options
 
 List user id options
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Greenhouse.
+
+Trigger
+
+New Candidate Application
+
+New Candidate Watching
+
+New Scheduled Interview
 
 # Scope and permissions
 
@@ -6750,6 +7390,18 @@ List folder ids options
 
 List tags options
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Guru.
+
+Trigger
+
+Card Updated (Instant)
+
+New Announcement Read (Instant)
+
+New Card Created (Instant)
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Guru when generating the key.
@@ -6804,7 +7456,7 @@ You&#x27;ll be asked to paste the credentials for Guru so Sana can store them se
 
 You&#x27;ve successfully connected your Guru account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Visualping Postman Airbyte Swagger DealCloud
+Related Articles Visualping Postman Onelogin Swagger Azure SQL Database
 
 ---
 
@@ -6859,6 +7511,16 @@ List account id options
 Start timer
 
 Stop timer
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Harvest.
+
+Trigger
+
+New Invoice Entry
+
+New Timesheet Entry
 
 # Scope and permissions
 
@@ -6920,7 +7582,7 @@ You&#x27;ve successfully connected your Harvest account. Click Continue to compl
 
 Time entries : When creating a time entry, only starting a timer is supported — you cannot specify a duration for a past task. Existing or ongoing time entries cannot be listed; the connector only supports creating new ones.
 
-Related Articles Airtable ClickUp Attio Calendly Procore
+Related Articles Attio WordPress Webex Calendly Procore
 
 ---
 
@@ -7009,6 +7671,66 @@ Create association
 List owners
 
 List pipelines and stages
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in HubSpot.
+
+Trigger
+
+Deleted Blog Posts
+
+New Company Property Change
+
+New Contact Added to List
+
+New Contact Property Change
+
+New Custom Object Property Change
+
+New Deal In Stage
+
+New Deal Property Change
+
+New Email Event
+
+New Email Subscriptions Timeline
+
+New Engagement
+
+New Events
+
+New Form Submission
+
+New Message in Thread
+
+New Note Created
+
+New or Updated Blog Post
+
+New or Updated Company
+
+New or Updated Contact
+
+New or Updated CRM Object
+
+New or Updated Custom Object
+
+New or Updated Deal
+
+New or Updated Line Item
+
+New or Updated Product
+
+New Social Media Message
+
+New Task Created
+
+New Thread Created
+
+New Ticket
+
+New Ticket Property Change
 
 # Scope and permissions
 
@@ -7206,7 +7928,7 @@ You&#x27;ve successfully connected your HubSpot account. Click Continue to compl
 
 Activities : The connector can detect and count activities on a record but cannot read their content (e.g. it can tell you a note exists, but not read the note). It can create activities such as notes, but cannot update existing ones.
 
-Related Articles Salesforce Pipedrive Attio Ironclad Zoho CRM
+Related Articles Salesforce Airtable Attio Ironclad Zoho CRM
 
 ---
 
@@ -7279,6 +8001,44 @@ Send incoming message
 Send message to contact
 
 Upsert contact
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Intercom.
+
+Trigger
+
+Lead Added Email
+
+New Closed Conversation
+
+New Companies
+
+New Conversation Rating Added
+
+New Conversations
+
+New Event
+
+New Leads
+
+New Reply From Admin
+
+New Reply From User
+
+New Tickets
+
+New Topic (Instant)
+
+New Unsubscriptions
+
+New Users
+
+Tag Added To Conversation
+
+Tag Added To Lead
+
+Tag Added To User
 
 # Scope and permissions
 
@@ -7384,7 +8144,7 @@ Search : The connector can only list contacts and conversations — it cannot ru
 
 Attachments : The connector cannot process attachments in conversations.
 
-Related Articles Gong Evernote Keycloak Slab Firebase
+Related Articles Zendesk Mailchimp Asana Evernote Guru
 
 ---
 
@@ -7433,6 +8193,18 @@ List selected events options
 List template id options
 
 List workflow id options
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Ironclad.
+
+Trigger
+
+New Approval Event Instant
+
+New Workflow Document Event (Instant)
+
+New Workflow Event (Instant)
 
 # Scope and permissions
 
@@ -7532,7 +8304,7 @@ You&#x27;ll be redirected to Ironclad to go through their OAuth flow. Sign in an
 
 You&#x27;ve successfully connected your Ironclad account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Salesforce ServiceNow Airtable Harvest Attio
+Related Articles Google Contacts Strava Harvest Calendly Procore
 
 ---
 
@@ -7661,6 +8433,20 @@ Search issues with jql post
 Transition issue
 
 Update comment
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Jira.
+
+Trigger
+
+New Event
+
+New Issue Created Event (Instant)
+
+New Issue Deleted Event (Instant)
+
+New Issue Updated Event (Instant)
 
 # Scope and permissions
 
@@ -8016,6 +8802,16 @@ Create comment on request
 
 List cloud id options
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Jira Service Desk.
+
+Trigger
+
+New Request Created
+
+Request Status Updated
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -8092,7 +8888,7 @@ You&#x27;ve successfully connected your Jira Service Desk account. Click Continu
 
 Scope : This connector currently only supports adding comments to existing customer requests. Searching, transitioning, or creating requests is not yet supported.
 
-Related Articles Google Drive Jira PagerDuty Datadog Jira Data Center
+Related Articles Google Drive Jira Intercom Datadog Jira Data Center
 
 ---
 
@@ -8149,6 +8945,14 @@ Get user submissions
 List forms
 
 List team id options
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Jotform.
+
+Trigger
+
+New Submission (Instant)
 
 # Scope and permissions
 
@@ -8214,7 +9018,7 @@ Read-only : The connector only reads forms and form submissions — it cannot cr
 
 Search : The connector can only list your forms; it cannot run a filtered search.
 
-Related Articles Shortcut Postman Zulip Swagger DealCloud
+Related Articles Postman Onelogin Guru Swagger Azure SQL Database
 
 ---
 
@@ -8276,6 +9080,14 @@ List realm options
 
 Update user
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Keycloak.
+
+Trigger
+
+New Event Created
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Keycloak when generating the key.
@@ -8330,7 +9142,7 @@ You&#x27;ll be asked to paste the credentials for Keycloak so Sana can store the
 
 You&#x27;ve successfully connected your Keycloak account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Postman Onelogin Airbyte 15Five Swagger
+Related Articles Postman Onelogin 15Five Swagger Azure SQL Database
 
 ---
 
@@ -8426,6 +9238,24 @@ Update initiative
 
 Update issue
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Linear.
+
+Trigger
+
+Issue Status Updated (Instant)
+
+Issue Updated (Instant)
+
+New Comment Created (Instant)
+
+New Issue Created (Instant)
+
+New Project Update Written (Instant)
+
+Project Updated (Instant)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -8514,7 +9344,7 @@ Search : Teams and projects can only be listed — no filtered search. Issue sea
 
 Users : The connector cannot look up users by name or email — only by ID.
 
-Related Articles Sentry Asana Tableau Procore Jira Data Center
+Related Articles GitHub GitLab Sentry Asana Monday
 
 ---
 
@@ -8609,6 +9439,14 @@ Retrieve comments on comments
 Retrieve comments shares
 
 Search organization
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in LinkedIn.
+
+Trigger
+
+New Organization Post Created
 
 # Scope and permissions
 
@@ -8722,7 +9560,7 @@ You&#x27;ve successfully connected your LinkedIn account. Click Continue to comp
 
 People search : The connector cannot search for people — it can only fetch a profile by ID.
 
-Related Articles Zendesk Trello GitHub Microsoft Entra ID Asana
+Related Articles Google Drive Zendesk Trello GitHub WordPress
 
 ---
 
@@ -8844,6 +9682,38 @@ Update campaign
 
 Update list
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Mailchimp.
+
+Trigger
+
+Link Clicked
+
+New Audience
+
+New Campaign
+
+New Customer
+
+New File
+
+New List Event (Instant)
+
+New Open
+
+New or Updated List Segment
+
+New or Updated Subscriber (Instant)
+
+New Order
+
+New Segment Tag Subscriber
+
+New Subscriber (Instant)
+
+New Unsubscriber (Instant)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions.
@@ -8898,7 +9768,7 @@ You&#x27;ll be redirected to Mailchimp to go through their OAuth flow. Sign in a
 
 You&#x27;ve successfully connected your Mailchimp account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Slack Trello GitLab Microsoft Entra ID LinkedIn
+Related Articles Slack Trello GitLab Attio Procore
 
 ---
 
@@ -9140,6 +10010,20 @@ Update cell
 
 Update worksheet tablerow
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Microsoft Excel.
+
+Trigger
+
+New Cell Value Changed
+
+New Row Added
+
+New Spreadsheet Created (Instant)
+
+New Spreadsheet Updated (Instant)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -9244,7 +10128,7 @@ Creating workbooks : The connector can read and edit Excel workbooks you already
 
 Formatting : The connector cannot change cell formatting.
 
-Related Articles Microsoft Planner Google Sheets Microsoft To Do Microsoft OneNote Microsoft Teams
+Related Articles Microsoft Planner Microsoft To Do Microsoft OneNote Microsoft Power BI Microsoft Teams
 
 ---
 
@@ -9408,7 +10292,7 @@ You&#x27;ll be redirected to Microsoft OneNote to go through their OAuth flow. S
 
 You&#x27;ve successfully connected your Microsoft OneNote account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Microsoft To Do Microsoft Excel Microsoft Entra ID Microsoft Teams Evernote
+Related Articles Microsoft Planner Microsoft To Do Microsoft Excel Microsoft Entra ID Microsoft Teams
 
 ---
 
@@ -9471,6 +10355,18 @@ Create task
 List user tasks
 
 Update task
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Microsoft Planner.
+
+Trigger
+
+New Plan Created
+
+New Task Assigned to User
+
+New Task Created
 
 # Scope and permissions
 
@@ -9580,7 +10476,7 @@ You&#x27;ve successfully connected your Microsoft Planner account. Click Continu
 
 Tasks : The connector can only list tasks assigned to the signed-in user, not tasks assigned to someone else or tasks that are unassigned.
 
-Related Articles Microsoft To Do Microsoft Excel Microsoft Entra ID Microsoft OneNote Microsoft Teams
+Related Articles Microsoft To Do Microsoft Excel Microsoft OneNote Microsoft Power BI Microsoft Teams
 
 ---
 
@@ -9667,6 +10563,18 @@ List reports
 List workspaces
 
 Refresh dataset
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Microsoft Power BI.
+
+Trigger
+
+Dataset Refresh Completed
+
+Dataset Refresh Failed
+
+New Dataset Refresh Created
 
 # Scope and permissions
 
@@ -9836,6 +10744,24 @@ Send channel message
 
 Send chat message
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Microsoft Teams.
+
+Trigger
+
+New Channel
+
+New Channel Message
+
+New Chat
+
+New Chat Message
+
+New Team
+
+New Team Member
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -9946,7 +10872,7 @@ You&#x27;ll be redirected to Microsoft Teams to go through their OAuth flow. Sig
 
 You&#x27;ve successfully connected your Microsoft Teams account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Slack Microsoft Planner Microsoft To Do Microsoft OneNote Google Chat
+Related Articles Microsoft Planner Microsoft To Do Microsoft Excel Microsoft OneNote Google Chat
 
 ---
 
@@ -10011,6 +10937,16 @@ List tasks
 List time zone options
 
 Update task
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Microsoft To Do.
+
+Trigger
+
+New List Created
+
+New Task Created (Instant)
 
 # Scope and permissions
 
@@ -10104,7 +11040,7 @@ Status : The connector cannot mark or unmark tasks as complete.
 
 Deletion : The connector cannot delete task lists or tasks.
 
-Related Articles Microsoft Planner Microsoft Entra ID Microsoft OneNote Microsoft Power BI Microsoft Teams
+Related Articles Microsoft Planner Microsoft Excel Microsoft OneNote Microsoft Power BI Microsoft Teams
 
 ---
 
@@ -10194,6 +11130,18 @@ Update shape
 
 Update sticky note
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Miro.
+
+Trigger
+
+Card Item Updated
+
+Item Position Changed
+
+New Card Item Created
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Miro when generating the key.
@@ -10254,7 +11202,7 @@ You&#x27;ve successfully connected your Miro account. Click Continue to complete
 
 Board search : The connector can list and open boards, but advanced search and filtering (by owner, date, tags, etc.) is not supported. To find a specific board, list your boards first and let the agent narrow it down from there.
 
-Related Articles Trello Monday Guru Mural Jira Data Center
+Related Articles Notion Trello Monday Mural Jira Data Center
 
 ---
 
@@ -10328,6 +11276,32 @@ List workspace ids options
 
 Update item name
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Monday.
+
+Trigger
+
+Column Value Updated (Instant)
+
+Name Updated (Instant)
+
+New Board Created
+
+New Item Created (Instant)
+
+New Sub-Item Created (Instant)
+
+New Sub-Item Update (Instant)
+
+New User Created
+
+Specific Column Updated (Instant)
+
+Sub-Item Column Value Updated (Instant)
+
+Sub-Item Name Updated (Instant)
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Monday when generating the key.
@@ -10382,7 +11356,7 @@ You&#x27;ll be asked to paste the credentials for Monday so Sana can store them 
 
 You&#x27;ve successfully connected your Monday account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Miro Postman Airbyte Swagger Jira Data Center
+Related Articles Salesforce Notion Miro Trello ClickUp
 
 ---
 
@@ -10433,6 +11407,18 @@ Tool
 Create mural
 
 Create sticky
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Mural.
+
+Trigger
+
+New Area Created
+
+New Mural Created
+
+New Sticky Note Created
 
 # Scope and permissions
 
@@ -10520,7 +11506,7 @@ You&#x27;ll be redirected to Mural to go through their OAuth flow. Sign in and a
 
 You&#x27;ve successfully connected your Mural account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Google Contacts Notion Miro Egnyte Webex
+Related Articles Miro Harvest WordPress Webex Calendly
 
 ---
 
@@ -10605,6 +11591,30 @@ Retrieve user
 Search
 
 Update block
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Notion.
+
+Trigger
+
+New Comment Created
+
+New Data Source Created
+
+New or Updated Page in Data Source (By Property)
+
+New or Updated Page in Data Source (By Timestamp)
+
+New Page in Data Source
+
+New Webhook Event (Instant)
+
+Page or Subpage Updated
+
+Page Properties Updated (Instant)
+
+Page Updated
 
 # Scope and permissions
 
@@ -10728,6 +11738,14 @@ List type id options
 
 Update user
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Okta.
+
+Trigger
+
+New Okta Event
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Okta when generating the key.
@@ -10800,7 +11818,7 @@ Search : The connector can only list users, not run a filtered search on metadat
 
 Field restrictions : When updating a user, only first name, last name, email, login, and mobile phone can be changed. When creating a user, only first name, last name, username, email, activated, and mobile can be set.
 
-Related Articles Postman Onelogin Airbyte Keycloak Swagger
+Related Articles Postman Onelogin 15Five Keycloak Swagger
 
 ---
 
@@ -10877,6 +11895,16 @@ List my drives
 List shared folder reference options
 
 Search files
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in OneDrive.
+
+Trigger
+
+New File Created (Instant)
+
+New Folder Created (Instant)
 
 # Scope and permissions
 
@@ -10986,7 +12014,7 @@ File formats : The connector can read the following file formats in your OneDriv
 
 Search : The connector does not support full-text search inside files. It can only locate files by their title or metadata, then read the file once it has been found — so search is limited for content-discovery use cases.
 
-Related Articles SharePoint Google Drive Box Dropbox Microsoft Excel
+Related Articles SharePoint Google Drive Dropbox Microsoft Excel Egnyte
 
 ---
 
@@ -11048,6 +12076,18 @@ Revoke user sessions
 
 Update user
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Onelogin.
+
+Trigger
+
+New Directory Sync Event
+
+New Event
+
+New User Created
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Onelogin when generating the key.
@@ -11102,7 +12142,7 @@ You&#x27;ll be asked to paste the credentials for Onelogin so Sana can store the
 
 You&#x27;ve successfully connected your Onelogin account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Postman Airbyte 15Five Keycloak Swagger
+Related Articles Postman 15Five Keycloak Guru Swagger
 
 ---
 
@@ -11226,7 +12266,7 @@ You&#x27;ve successfully connected your Opsgenie account. Click Continue to comp
 
 Search : The connector can only fetch alert statuses when you already know the alert&#x27;s ID. Searching alerts by other attributes is not supported.
 
-Related Articles Visualping Postman Airbyte Swagger DealCloud
+Related Articles Visualping Zulip Airbyte Slab DealCloud
 
 ---
 
@@ -11305,6 +12345,22 @@ Search people
 Update calendar event
 
 Update recurring event instance
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Outlook Calendar.
+
+Trigger
+
+Calendar Event Deleted (Instant)
+
+New Calendar Event (Instant)
+
+New Calendar Event Update (Instant)
+
+New Upcoming Calendar Event
+
+New Upcoming Calendar Event (Polling)
 
 # Scope and permissions
 
@@ -11398,7 +12454,7 @@ You&#x27;ve successfully connected your Outlook Calendar account. Click Continue
 
 Contacts : The connector does not have access to your contacts, so other participants must be specified by their email address rather than by name.
 
-Related Articles Google Calendar Outlook Email Calendly Microsoft Teams Procore
+Related Articles Google Calendar Outlook Email Sentry Onelogin Calendly
 
 ---
 
@@ -11509,6 +12565,20 @@ Reply to email
 Send email
 
 Update contact
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Outlook Email.
+
+Trigger
+
+New Attachment Received (Instant)
+
+New Contact Event (Instant)
+
+New Email Event (Instant)
+
+New Email in Shared Folder Event
 
 # Scope and permissions
 
@@ -11638,7 +12708,7 @@ Message flags and categories : The connector does not modify label/category defi
 
 Folders : The connector cannot create, rename, or delete folders. It can only see and work with top-level folders — it can tell you whether a top-level folder contains sub-folders, but cannot list those sub-folders or act on them.
 
-Related Articles Outlook Calendar SharePoint Gmail Dropbox Egnyte
+Related Articles Outlook Calendar Gmail Microsoft Planner Trello Freshdesk
 
 ---
 
@@ -11706,6 +12776,16 @@ Resolve incident
 
 Trigger incident
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in PagerDuty.
+
+Trigger
+
+New On-Call Rotation
+
+New or Updated Incident
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions.
@@ -11770,7 +12850,7 @@ Incident details : The connector can list incidents, but it cannot read detailed
 
 Active incidents only : The connector can only list active incidents — past or resolved incidents are not retrievable.
 
-Related Articles ServiceNow Harvest WordPress Calendly Procore
+Related Articles Datadog Onelogin Procore Guru Azure SQL Database
 
 ---
 
@@ -11888,6 +12968,24 @@ Update lead
 
 Update person
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Pipedrive.
+
+Trigger
+
+Deal Updated (Instant)
+
+Lead Updated (Instant)
+
+New Deal (Instant)
+
+New Event (Instant)
+
+New Person (Instant)
+
+Person Updated (Instant)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -12004,7 +13102,7 @@ Deletion : Deleting records is not supported.
 
 Notes : Notes can be searched and created, but not updated or deleted.
 
-Related Articles Salesforce Zendesk Attio HubSpot Zoho CRM
+Related Articles Salesforce Zoom Attio HubSpot Zoho CRM
 
 ---
 
@@ -12057,6 +13155,14 @@ Create environment
 List workspace id options
 
 Run monitor
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Postman.
+
+Trigger
+
+New Monitor Run Completed
 
 # Scope and permissions
 
@@ -12112,7 +13218,7 @@ You&#x27;ll be asked to paste the credentials for Postman so Sana can store them
 
 You&#x27;ve successfully connected your Postman account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Jotform Sentry Visualping Datadog Swagger
+Related Articles Jotform Sentry Visualping Datadog Snowflake
 
 ---
 
@@ -12178,6 +13284,46 @@ Create timesheet
 
 List company id options
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Procore.
+
+Trigger
+
+Budget Snapshot Event (Instant)
+
+Commitment Change Order Event (Instant)
+
+New Budget Snapshot Event (Instant)
+
+New Change Order Package Event (Instant)
+
+New Commitment Change Order Event (Instant)
+
+New Event (Instant)
+
+New Event (Instant)
+
+New Prime Contract Event (Instant)
+
+New Purchase Order Event (Instant)
+
+New RFI Event (Instant)
+
+New Submittal Event (Instant)
+
+New Timecard Entry Event (Instant)
+
+Prime Contract Change Order Event (Instant)
+
+Prime Contract Event(Instant)
+
+Purchase Order Event (Instant)
+
+RFI Event (Instant)
+
+Submittal Event (Instant)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions.
@@ -12232,7 +13378,7 @@ You&#x27;ll be redirected to Procore to go through their OAuth flow. Sign in and
 
 You&#x27;ve successfully connected your Procore account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Strava Harvest PagerDuty WordPress Calendly
+Related Articles Outlook Calendar Zoom Trello Bitbucket Attio
 
 ---
 
@@ -12338,7 +13484,7 @@ You&#x27;ll be asked to paste the credentials for RocketReach so Sana can store 
 
 You&#x27;ve successfully connected your RocketReach account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Visualping Postman Airbyte Swagger DealCloud
+Related Articles Zulip Airbyte Slab Swagger DealCloud
 
 ---
 
@@ -12430,6 +13576,32 @@ Text search
 
 Update crm record
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Salesforce.
+
+Trigger
+
+Case Updated (Instant, of Selectable Type)
+
+Email Template Updated (Instant, of Selectable Type)
+
+Knowledge Article Updated (Instant, of Selectable Type)
+
+New Case (Instant, of Selectable Type)
+
+New Deleted Record (Instant, of Selectable Type)
+
+New Email Template (Instant, of Selectable Type)
+
+New Knowledge Article (Instant, of Selectable Type)
+
+New Outbound Message (Instant)
+
+New Record (Instant, of Selectable Type)
+
+New Updated Record (Instant, of Selectable Type)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions.
@@ -12492,7 +13664,7 @@ Sandbox — a non-production environment, useful for testing the connector witho
 
 You&#x27;ve successfully connected your Salesforce account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Visualping Onelogin Airbyte DealCloud Upsales
+Related Articles Zoom Airtable Attio Monday Ironclad
 
 ---
 
@@ -12552,6 +13724,14 @@ List project issues
 
 Update issue
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Sentry.
+
+Trigger
+
+New Issue Event (Instant)
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Sentry when generating the key.
@@ -12606,7 +13786,7 @@ You&#x27;ll be asked to paste the credentials for Sentry so Sana can store them 
 
 You&#x27;ve successfully connected your Sentry account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Postman Evernote Guru Swagger Jira Data Center
+Related Articles Visualping Onelogin Calendly Keycloak Supabase
 
 ---
 
@@ -12758,7 +13938,7 @@ Q: If a ServiceNow admin generates the Client ID and Secret, can they be shared 
 
 A: Yes, the Client ID and Secret can be shared with non-admin users — sharing them does not grant admin access. The Client ID and Secret only identify the OAuth application that lets the OAuth flow start. The actual access level is determined by each user&#x27;s own permissions in ServiceNow: when they connect, they authenticate with their own ServiceNow credentials and the connector mirrors their individual access.
 
-Related Articles Salesforce Airtable Intercom Attio Google Slides
+Related Articles Airtable Intercom Attio Ironclad Google Slides
 
 ---
 
@@ -12853,6 +14033,22 @@ Search files
 Search sites
 
 Select files
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in SharePoint.
+
+Trigger
+
+File Updated or Deleted (Instant)
+
+New File Created
+
+New Folder Created
+
+New List Item
+
+Updated List Item
 
 # Scope and permissions
 
@@ -13090,6 +14286,28 @@ Update product
 
 Update product variant
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Shopify.
+
+Trigger
+
+Collection Updated (Instant)
+
+New Abandoned Cart
+
+New Article
+
+New Customer Data Request
+
+New Event Emitted (Instant)
+
+New Page
+
+New product added to custom collection
+
+New Product Created (Instant)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions.
@@ -13144,7 +14362,7 @@ You&#x27;ll be redirected to Shopify to go through their OAuth flow. Sign in and
 
 You&#x27;ve successfully connected your Shopify account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Salesforce Confluence WordPress Confluence Data Center Upsales
+Related Articles Confluence HubSpot Firebase Confluence Data Center Upsales
 
 ---
 
@@ -13201,6 +14419,14 @@ List label ids options
 List workflow state id options
 
 Search stories
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Shortcut.
+
+Trigger
+
+New Event Received (Instant)
 
 # Scope and permissions
 
@@ -13262,7 +14488,7 @@ You&#x27;ve successfully connected your Shortcut account. Click Continue to comp
 
 Stories only : The connector can only search and read Shortcut stories — not epics, users, roadmaps, or other entity types.
 
-Related Articles Visualping Postman Airbyte Swagger DealCloud
+Related Articles Visualping Postman Guru Swagger Azure SQL Database
 
 ---
 
@@ -13370,7 +14596,7 @@ You&#x27;ll be asked to paste the credentials for Slab so Sana can store them se
 
 You&#x27;ve successfully connected your Slab account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Monday Datadog Postman Swagger Confluence Data Center
+Related Articles Monday Datadog Airbyte DealCloud Confluence Data Center
 
 ---
 
@@ -13449,6 +14675,30 @@ List channels
 Post message
 
 Search
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Slack.
+
+Trigger
+
+New Channel Created (Instant)
+
+New Interaction Events (Instant)
+
+New Keyword Mention (Instant)
+
+New Message In Channels (Instant)
+
+New Private Channel Created
+
+New Reaction Added (Instant)
+
+New Saved Message (Instant)
+
+New User Added (Instant)
+
+New User Mention (Instant)
 
 # Scope and permissions
 
@@ -13538,7 +14788,217 @@ User search : The "find users" capability only matches by exact email. As a work
 
 Channel search : The connector lists channels and searches within those results in batches of 250 — it cannot search channels by title or metadata directly. Search quality drops in workspaces with many channels, so naming the exact channel works best.
 
-Related Articles Zoom Intercom Webex Zulip Microsoft Teams
+Related Articles Salesforce Zoom Attio Asana Microsoft Teams
+
+---
+
+## Smartsheet
+
+**Source:** https://intercom-help.eu/workday-sana/en/articles/699735-smartsheet
+
+Prerequisite : Third-party connectors are available only on the Sana Enterprise tier, with one exception: the Workday connector is included for both Sana Core and Sana Enterprise.
+
+# Introduction
+
+Connect Smartsheet to Sana to work with your sheets in natural language. List and search sheets, read and update rows and columns, create, copy, or import sheets, and email sheets to your team.
+
+In summary, the connector has the following key characteristics:
+
+-
+
+Category: Project management
+
+-
+
+Connector type: Real-time
+
+-
+
+Auth type: OAuth
+
+-
+
+Hosting type: Managed
+
+# Capabilities
+
+This connector is able to do the following:
+
+Capability
+
+List sheets
+
+Search sheets
+
+Read sheets
+
+Create sheets
+
+Copy sheets
+
+Delete sheets
+
+Add rows
+
+Update rows
+
+Manage columns
+
+Email sheets
+
+# Tools
+
+While the capabilities above describe what the connector can do at a high level, the underlying tools show exactly which operations the agent can use when you ask Sana about Smartsheet. In practice, the agent may call one or more tools to achieve a single capability.
+
+Tool
+
+Add column
+
+Add row to sheet
+
+Copy rows
+
+Copy sheet
+
+Create sheet
+
+Delete column
+
+Delete rows
+
+Delete sheet
+
+Email sheet
+
+Get current user
+
+Get row
+
+Get sheet
+
+Import sheet
+
+List columns
+
+List folder id options
+
+List sheet id options
+
+List sheets
+
+List template id options
+
+List workspace id options
+
+List workspace templates
+
+Move rows
+
+Move sheet
+
+New sheet from template
+
+Search
+
+Update column
+
+Update row
+
+Update sheet
+
+# Scope and permissions
+
+This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
+
+Scope
+
+Purpose
+
+READ_SHEETS
+
+Read your sheets, columns, rows, and search results
+
+WRITE_SHEETS
+
+Create and update sheets, rows, and columns on your behalf
+
+CREATE_SHEETS
+
+Create new sheets and import data into Smartsheet
+
+DELETE_SHEETS
+
+Delete sheets, rows, and columns
+
+SHARE_SHEETS
+
+Email sheets to recipients on your behalf
+
+# Set up instructions
+
+Prerequisites :
+
+-
+
+You are a Sana Enterprise user – all third-party connectors except the Workday connector are available only for users on the Sana Enterprise tier.
+
+-
+
+Your Sana workspace owner has enabled this connector – if the workspace owner has disabled the connector it won&#x27;t appear in the list of available connectors.
+
+## Step 1: Go to the connectors page in Sana
+
+In Sana, click on your profile icon and name in the bottom left corner and select Connectors .
+
+## Step 2: Find Smartsheet in the list of available connectors
+
+Scroll to the Available connectors section and locate Smartsheet.
+
+Note : If you can&#x27;t find a connector in this list, it means one of the following:
+
+-
+
+You&#x27;ve already connected it — check the ”Active connectors” section at the top of the connectors page, or
+
+-
+
+Your workspace owner has disabled this connector for your workspace — reach out to them for more information or to request that it be enabled.
+
+## Step 3: Hover the connector card and click the connect button
+
+Hover the Smartsheet card and click the Connect button.
+
+Tip : If you click the card itself instead of the Connect button, you&#x27;ll open a connector detail page with more information about its capabilities.
+
+## Step 4: Initialize the Pipedream connection
+
+When clicking Connect in the previous step, a pop-up will appear powered by Pipedream. Click the Continue button in the pop-up to initialize the set up.
+
+Note : Sana uses Pipedream to connect your account. Pipedream is a Workday product, trusted by millions of people to keep their data secure.
+
+## Step 5: Sign in to Smartsheet and approve the requested scopes
+
+You&#x27;ll be redirected to Smartsheet to go through their OAuth flow. Sign in and approve the scopes Sana needs to operate the connector.
+
+## Step 6: Complete the set up
+
+You&#x27;ve successfully connected your Smartsheet account. Click Continue to complete the setup and start using the connector.
+
+# Known limitations
+
+-
+
+Attachments : The connector cannot read, download, or add files attached to sheets or rows.
+
+-
+
+Comments : The connector cannot read or post comments and discussions on rows.
+
+-
+
+Scope : The connector works with sheets only — it does not access Smartsheet reports, dashboards, or forms.
+
+Related Articles Coda Google Sheets Microsoft Excel Supabase Azure SQL Database
 
 ---
 
@@ -13596,6 +15056,40 @@ List users options
 
 List warehouses options
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Snowflake.
+
+Trigger
+
+Failed Task in Schema
+
+New Database
+
+New Deleted Role
+
+New Deleted User
+
+New Query Results
+
+New Role
+
+New Row
+
+New Schema
+
+New Table
+
+New Update Role
+
+New Update User
+
+New Usage Monitor
+
+New User
+
+New, Updated, or Deleted Warehouse
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Snowflake when generating the key.
@@ -13650,7 +15144,7 @@ You&#x27;ll be asked to paste the credentials for Snowflake so Sana can store th
 
 You&#x27;ve successfully connected your Snowflake account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Postman Airbyte Swagger Azure SQL Database Databricks
+Related Articles Visualping Onelogin 15Five Tableau Swagger
 
 ---
 
@@ -13713,6 +15207,20 @@ Get activity list
 Get stats
 
 Update activity
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Strava.
+
+Trigger
+
+New Activity Created Event
+
+New Activity Deleted Event
+
+New Activity Updated Event
+
+New Custom Event
 
 # Scope and permissions
 
@@ -13788,7 +15296,7 @@ You&#x27;ll be redirected to Strava to go through their OAuth flow. Sign in and 
 
 You&#x27;ve successfully connected your Strava account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Harvest PagerDuty WordPress Calendly Procore
+Related Articles Harvest PagerDuty WordPress Webex Calendly
 
 ---
 
@@ -13966,6 +15474,34 @@ Void invoice
 
 Write off invoice
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Stripe.
+
+Trigger
+
+Canceled Subscription
+
+New Abandoned Cart
+
+New Custom Webhook Events
+
+New Customer
+
+New Dispute
+
+New Failed Invoice Payment
+
+New Failed Payment
+
+New Invoice
+
+New Payment
+
+New Subscription
+
+Subscription Updated
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Stripe when generating the key.
@@ -14020,7 +15556,7 @@ You&#x27;ll be asked to paste the credentials for Stripe so Sana can store them 
 
 You&#x27;ve successfully connected your Stripe account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Notion Intercom LinkedIn Calendly Zoho CRM
+Related Articles What is Sana Notion Intercom Dynamics 365 Business Central Zoho CRM
 
 ---
 
@@ -14088,6 +15624,16 @@ Update row
 
 Upsert row
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Supabase.
+
+Trigger
+
+New Row Added
+
+New Webhook Event (Instant)
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Supabase when generating the key.
@@ -14142,7 +15688,7 @@ You&#x27;ll be asked to paste the credentials for Supabase so Sana can store the
 
 You&#x27;ve successfully connected your Supabase account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Coda Postman Swagger Snowflake Google Cloud
+Related Articles Coda Swagger Azure SQL Database Snowflake Google Cloud
 
 ---
 
@@ -14193,6 +15739,14 @@ Tool
 Clone api version
 
 Delete api version
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Swagger.
+
+Trigger
+
+New API Version Created
 
 # Scope and permissions
 
@@ -14248,7 +15802,7 @@ You&#x27;ll be asked to paste the credentials for Swagger so Sana can store them
 
 You&#x27;ve successfully connected your Swagger account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Shortcut Visualping Postman Airbyte DealCloud
+Related Articles Sentry Postman Onelogin Guru Azure SQL Database
 
 ---
 
@@ -14311,6 +15865,16 @@ List sites
 List workbooks
 
 Query projects
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Tableau.
+
+Trigger
+
+New Label Created (Instant)
+
+New Workbook Created (Instant)
 
 # Scope and permissions
 
@@ -14521,6 +16085,28 @@ Update project
 Update section
 
 Update task
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Todoist.
+
+Trigger
+
+New Completed Task
+
+New Incomplete Task
+
+New or Modified Project
+
+New or Modified Task
+
+New Project
+
+New Section
+
+New Sync Resources
+
+New Task
 
 # Scope and permissions
 
@@ -14736,6 +16322,42 @@ Search members
 
 Update card
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Trello.
+
+Trigger
+
+Card Archived (Instant)
+
+Card Due Date Reminder
+
+Card Moved (Instant)
+
+Card Updated (Instant)
+
+Custom Webhook Events (Instant)
+
+New Attachment (Instant)
+
+New Board (Instant)
+
+New Board Activity (Instant)
+
+New Card (Instant)
+
+New Checklist (Instant)
+
+New Comment Added to Card (Instant)
+
+New Label Added To Card (Instant)
+
+New Label Created (Instant)
+
+New Member on Card (Instant)
+
+New Notification
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -14820,7 +16442,7 @@ Checklists : Checklists are not supported.
 
 Comments : Comments can only be added — existing comments cannot be edited or deleted.
 
-Related Articles Jira Miro Todoist ClickUp Monday
+Related Articles Jira Linear ClickUp Bitbucket Monday
 
 ---
 
@@ -14927,6 +16549,22 @@ Phone number lookup
 Send message
 
 Send sms verification
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Twilio.
+
+Trigger
+
+New Call (Instant)
+
+New Incoming SMS (Instant)
+
+New Phone Number
+
+New Recording
+
+New Transcript Created
 
 # Scope and permissions
 
@@ -15074,6 +16712,14 @@ Update dropdown multiple choice ranking
 
 Update form title
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Typeform.
+
+Trigger
+
+New Submission
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -15188,7 +16834,7 @@ You&#x27;ll be redirected to Typeform to go through their OAuth flow. Sign in an
 
 You&#x27;ve successfully connected your Typeform account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Canva Jotform Google Docs Airbyte Opsgenie
+Related Articles Canva Jotform Google Docs Calendly Google Slides
 
 ---
 
@@ -15414,7 +17060,7 @@ Deletion : Records cannot be deleted through this connector; users can only be d
 
 Custom fields : Reading and writing arbitrary custom fields is limited.
 
-Related Articles Salesforce Mailchimp Microsoft Entra ID Monday Freshdesk
+Related Articles Salesforce Pipedrive HubSpot Freshdesk Dynamics 365 Sales
 
 ---
 
@@ -15474,6 +17120,18 @@ List workspace id options
 
 Update job
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Visualping.
+
+Trigger
+
+New Alert Received
+
+New Job Created
+
+New Job Event
+
 # Scope and permissions
 
 This connector uses API keys . When you connect your account, we securely store your keys to connect to this connector&#x27;s APIs. The scopes for this connector depends on the scopes you assign your API key in Visualping when generating the key.
@@ -15528,7 +17186,7 @@ You&#x27;ll be asked to paste the credentials for Visualping so Sana can store t
 
 You&#x27;ve successfully connected your Visualping account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Ashby BambooHR Postman Greenhouse Databricks
+Related Articles BambooHR Datadog Postman Greenhouse Databricks
 
 ---
 
@@ -15585,6 +17243,14 @@ Create message
 Create room
 
 List messages
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Webex.
+
+Trigger
+
+New Message (Instant)
 
 # Scope and permissions
 
@@ -15670,7 +17336,7 @@ You&#x27;ve successfully connected your Webex account. Click Continue to complet
 
 Sender attribution : Messages sent through the connector appear as "Pipedream" rather than the signed-in user. The signed-in user is referenced in the message metadata, but it won&#x27;t look like a normal user sent it.
 
-Related Articles Slack Intercom Procore Google Chat Mural
+Related Articles Zulip Twilio Airbyte Google Chat Mural
 
 ---
 
@@ -15723,6 +17389,18 @@ Create post
 Delete post
 
 List site id options
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in WordPress.
+
+Trigger
+
+New Comment
+
+New Follower
+
+New Post
 
 # Scope and permissions
 
@@ -15792,7 +17470,7 @@ You&#x27;ve successfully connected your WordPress account. Click Continue to com
 
 Posts : The connector can create and delete posts, but it cannot list, read, or update existing posts.
 
-Related Articles Confluence ServiceNow Calendly Procore Jira Service Desk
+Related Articles Confluence ServiceNow Harvest LinkedIn Jira Service Desk
 
 ---
 
@@ -15834,6 +17512,8 @@ Payroll
 
 View pay information, direct deposit, and tax forms
 
+Click here to view the full list of capabilities offered by the Self-Service Agent.
+
 Data access is governed by Workday&#x27;s internal permission system. This means:
 
 -
@@ -15848,17 +17528,13 @@ Permissions mirror what the user can already do in Workday directly
 
 No additional scope configuration is needed in Sana
 
-# Known limitations
-
--
-
-Human-in-the-loop: For the Workday connector, Sana does not directly handle read or write actions. When a user wants to update something, Sana hands the request over to Workday’s self-service agent (WSSA), which completes the change on its own. As a result, there is no approval or “human-in-the-loop” step shown in the Sana UI for these actions.
+## Known limitations
 
 -
 
 Speed: As Sana hands the action over to Workday’s self-service agent (WSSA) to complete, the overall speed is dependent on how quickly Workday&#x27;s agent processes the request, so results may arrive more slowly than for actions handled directly in Sana or via other 3rd party connectors.
 
-# FAQ
+## FAQ
 
 Q: How do I connect to Workday?
 
@@ -15868,7 +17544,7 @@ Q: What permissions does Workday require in Sana?
 
 A: Your existing Workday permissions determine what you can access in Sana. You can only see and do what you&#x27;re already authorized for in Workday.
 
-Related Articles Manage your Sana account profile About connectors Frequently Asked Questions (FAQ) What is Sana Getting started for admins
+Related Articles Frequently Asked Questions (FAQ) What is Sana Privacy and permissions Mural Navigational search
 
 ---
 
@@ -15984,6 +17660,32 @@ Set ticket tags
 
 Update ticket
 
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Zendesk.
+
+Trigger
+
+Locale Updated
+
+New Side Conversation
+
+New Side Conversation Reply
+
+New Ticket (Instant)
+
+New Ticket Added to View (Instant)
+
+New Ticket Comment Added (Instant)
+
+Ticket Closed (Instant)
+
+Ticket Pending (Instant)
+
+Ticket Solved (Instant)
+
+Ticket Updated (Instant)
+
 # Scope and permissions
 
 This connector uses OAuth . When you connect your account, you will need to sign into your account and grant the required permissions:
@@ -16084,7 +17786,7 @@ Users : The connector can&#x27;t fetch detailed user data in your Zendesk worksp
 
 Article search : The connector can only list help-center articles; it cannot run a filtered search.
 
-Related Articles Intercom Asana Freshdesk Freshservice Jira Service Desk
+Related Articles Slack Trello Attio Asana Confluence Data Center
 
 ---
 
@@ -16147,6 +17849,30 @@ List modules
 List objects
 
 Search objects
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Zoho CRM.
+
+Trigger
+
+New Contact (Instant)
+
+New Event (Instant)
+
+New Lead (Instant)
+
+New Module Entry (Instant)
+
+New or Updated Contact (Instant)
+
+New or Updated Lead (Instant)
+
+New or Updated Module Entry (Instant)
+
+New User
+
+Updated Module Entry (Instant)
 
 # Scope and permissions
 
@@ -16266,7 +17992,7 @@ You&#x27;ll be redirected to Zoho CRM to go through their OAuth flow. Sign in an
 
 You&#x27;ve successfully connected your Zoho CRM account. Click Continue to complete the setup and start using the connector.
 
-Related Articles Pipedrive Bitbucket HubSpot Egnyte Ironclad
+Related Articles Salesforce Pipedrive Bitbucket Ironclad Confluence Data Center
 
 ---
 
@@ -16375,6 +18101,40 @@ Update meeting
 Update webinar
 
 View user
+
+# Triggers
+
+While tools are the actions an agent takes on your behalf, triggers are the events that can start an agent automatically. When you build an agent, you can choose one of the triggers below as its starting point. For example, having the agent run every time something new happens in Zoom.
+
+Trigger
+
+Custom Events (Instant)
+
+Meeting Created (Instant)
+
+Meeting Deleted (Instant)
+
+Meeting Ended (Instant)
+
+Meeting Started (Instant)
+
+Meeting Updated (Instant)
+
+New Recording Transcript Completed (Instant)
+
+Recording Completed (Instant)
+
+Webinar Created (Instant)
+
+Webinar Deleted (Instant)
+
+Webinar Ended (Instant)
+
+Webinar Started (Instant)
+
+Webinar Updated (Instant)
+
+Zoom Phone Events (Instant)
 
 # Scope and permissions
 
@@ -16508,7 +18268,7 @@ Manual recording : As host, you must click Record and select Cloud recording in 
 
 Zoom plan : Recording and transcription require a Pro, Business, Education, or Enterprise plan.
 
-Related Articles HubSpot Gong Twilio Ironclad DealCloud
+Related Articles Attio Gong Twilio Zoho CRM Meeting agent
 
 ---
 
@@ -16620,6 +18380,6 @@ You&#x27;ve successfully connected your Zulip account. Click Continue to complet
 
 Reading messages : The connector can send messages to Zulip but cannot find or read existing messages.
 
-Related Articles Visualping Postman Twilio Airbyte Swagger
+Related Articles RocketReach Twilio Airbyte Slab DealCloud
 
 ---
