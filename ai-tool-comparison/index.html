@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Tool Stack Decision Guide</title>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --panel: #111827;
+      --panel-2: #172033;
+      --ink: #f8fafc;
+      --muted: #94a3b8;
+      --line: #263247;
+      --blue: #60a5fa;
+      --green: #34d399;
+      --gold: #fbbf24;
+      --red: #fb7185;
+      --purple: #a78bfa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #111c34 0, var(--bg) 46rem);
+      color: var(--ink);
+      font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 18px 56px; }
+    header { padding: 18px 0 22px; }
+    .eyebrow { color: var(--blue); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 800; }
+    h1 { margin: 8px 0 10px; font-size: clamp(2rem, 6vw, 4.25rem); line-height: 0.98; letter-spacing: -0.045em; max-width: 900px; }
+    .lead { color: var(--muted); max-width: 760px; font-size: 1.04rem; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+    button, .link-button {
+      border: 1px solid var(--line);
+      background: rgba(17, 24, 39, 0.82);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    button.active { border-color: var(--blue); background: rgba(96, 165, 250, 0.14); color: #dbeafe; }
+    .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(17, 24, 39, 0.92);
+      border-radius: 14px;
+      padding: 18px;
+      min-height: 275px;
+    }
+    .card h2 { margin: 0 0 8px; font-size: 1.25rem; }
+    .tag { display: inline-block; margin-bottom: 14px; border-radius: 999px; padding: 5px 9px; font-size: 0.72rem; font-weight: 800; }
+    .google { color: #dbeafe; background: rgba(96, 165, 250, 0.16); }
+    .codex { color: #d1fae5; background: rgba(52, 211, 153, 0.15); }
+    .cowork { color: #ede9fe; background: rgba(167, 139, 250, 0.15); }
+    .lovable { color: #fef3c7; background: rgba(251, 191, 36, 0.15); }
+    .card p { color: var(--muted); margin: 0 0 12px; }
+    .list { margin: 0; padding-left: 18px; color: #d1d5db; }
+    .list li { margin: 6px 0; }
+    .section { margin-top: 28px; border: 1px solid var(--line); border-radius: 16px; background: rgba(10, 14, 26, 0.55); overflow: hidden; }
+    .section-head { padding: 18px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+    .section h2 { margin: 0; font-size: 1.25rem; }
+    .section-body { padding: 18px; }
+    .chooser { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .choice {
+      width: 100%; border-radius: 12px; text-align: left; padding: 16px;
+      background: var(--panel); border: 1px solid var(--line);
+    }
+    .choice strong { display: block; margin-bottom: 4px; }
+    .choice span { color: var(--muted); font-weight: 500; }
+    .answer { margin-top: 14px; padding: 16px; border-radius: 12px; background: var(--panel-2); border: 1px solid var(--line); }
+    .answer h3 { margin: 0 0 6px; }
+    .answer p { margin: 0; color: #cbd5e1; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    th, td { border-bottom: 1px solid var(--line); padding: 12px 10px; text-align: left; vertical-align: top; }
+    th { color: #cbd5e1; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    td { color: var(--muted); }
+    td:first-child { color: var(--ink); font-weight: 800; }
+    details { border-top: 1px solid var(--line); padding: 0; }
+    summary { cursor: pointer; padding: 14px 18px; font-weight: 800; }
+    details p { padding: 0 18px 16px; margin: 0; color: var(--muted); }
+    footer { margin-top: 30px; color: #64748b; font-size: 0.82rem; }
+    @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) {
+      .wrap { padding: 22px 14px 42px; }
+      .grid, .chooser { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+      .section-head { display: block; }
+      .section-head .link-button { display: inline-block; margin-top: 12px; }
+      table, thead, tbody, tr, th, td { display: block; }
+      thead { display: none; }
+      tr { border-bottom: 1px solid var(--line); padding: 8px 0; }
+      td { border-bottom: 0; padding: 6px 0; }
+      td::before { content: attr(data-label); display: block; color: var(--blue); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 800; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="eyebrow">Hephaestus Intelligence Hub</div>
+      <h1>Which AI tool should Greg use?</h1>
+      <p class="lead">An interactive field guide to Google AI Studio, Codex, Claude Cowork, and Lovable. The core distinction: Google AI Studio is the Gemini lab, Codex is the engineering agent, Claude Cowork is the operating system, and Lovable is the fastest web-product builder.</p>
+      <div class="toolbar" aria-label="Filter tools">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="prototype">Prototype</button>
+        <button data-filter="code">Code</button>
+        <button data-filter="org">Organization</button>
+        <button data-filter="webapp">Web App</button>
+      </div>
+    </header>
+
+    <section class="grid" id="cards">
+      <article class="card" data-tags="prototype webapp">
+        <span class="tag google">Gemini Lab</span>
+        <h2>Google AI Studio</h2>
+        <p>Use when the question is: <strong>Can Gemini do this?</strong></p>
+        <ul class="list">
+          <li>Prompt and model experiments</li>
+          <li>Gemini API starter code</li>
+          <li>Multimodal tests</li>
+          <li>Google-native prototypes</li>
+        </ul>
+      </article>
+      <article class="card" data-tags="code">
+        <span class="tag codex">Engineering Agent</span>
+        <h2>Codex</h2>
+        <p>Use when the question is: <strong>Can this code be made correct?</strong></p>
+        <ul class="list">
+          <li>Repo inspection and edits</li>
+          <li>Testing and verification</li>
+          <li>Code review and debugging</li>
+          <li>AGENTS.md, skills, plugins, MCP</li>
+        </ul>
+      </article>
+      <article class="card" data-tags="org">
+        <span class="tag cowork">Operating System</span>
+        <h2>Claude Cowork</h2>
+        <p>Use when the question is: <strong>What are we doing and why?</strong></p>
+        <ul class="list">
+          <li>Board personas</li>
+          <li>Journal and decisions</li>
+          <li>Pending items</li>
+          <li>Project continuity</li>
+        </ul>
+      </article>
+      <article class="card" data-tags="prototype webapp">
+        <span class="tag lovable">Product Builder</span>
+        <h2>Lovable</h2>
+        <p>Use when the question is: <strong>Can I get a working web app fast?</strong></p>
+        <ul class="list">
+          <li>Landing pages and dashboards</li>
+          <li>Supabase-backed apps</li>
+          <li>Fast UI iteration</li>
+          <li>Deployable prototypes</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Decision Flow</h2>
+        <a class="link-button" href="../">Back to Hub</a>
+      </div>
+      <div class="section-body">
+        <div class="chooser">
+          <button class="choice" data-answer="gemini"><strong>I need to test Gemini or Google APIs.</strong><span>Model capability, multimodal behavior, Workspace integration, API snippets.</span></button>
+          <button class="choice" data-answer="web"><strong>I need a working web app quickly.</strong><span>Pages, dashboards, SaaS prototypes, Supabase-backed demos.</span></button>
+          <button class="choice" data-answer="hardening"><strong>I already have code and need it fixed.</strong><span>Bug fixes, testing, repo cleanup, architecture review, model-string audits.</span></button>
+          <button class="choice" data-answer="strategy"><strong>I need continuity, ownership, or a decision.</strong><span>Board routing, journal, pending items, project status, institutional memory.</span></button>
+        </div>
+        <div class="answer" id="answer">
+          <h3>Pick the job first.</h3>
+          <p>The right tool depends on the work surface. Click one of the four prompts above.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Boundary Table</h2></div>
+      <div class="section-body">
+        <table>
+          <thead><tr><th>Tool</th><th>Best Use</th><th>Stop Before</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Tool">Google AI Studio</td><td data-label="Best Use">Gemini-first experiments and Google-native prototypes.</td><td data-label="Stop Before">Turning it into the default workspace for production apps or organizational memory.</td></tr>
+            <tr><td data-label="Tool">Codex</td><td data-label="Best Use">Repo-local engineering, testing, review, and verification.</td><td data-label="Stop Before">Using it as the fastest blank-page app designer when Lovable can draft faster.</td></tr>
+            <tr><td data-label="Tool">Claude Cowork</td><td data-label="Best Use">Strategy, personas, pending items, decisions, and continuity.</td><td data-label="Stop Before">Treating it as a code execution or deployment platform.</td></tr>
+            <tr><td data-label="Tool">Lovable</td><td data-label="Best Use">Fast web-product creation and UI iteration.</td><td data-label="Stop Before">Assuming generated architecture is production-clean without Codex review.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Short White Paper</h2></div>
+      <details open><summary>Recommendation</summary><p>Do not add Google AI Studio as a fifth general-purpose workspace. Add it as a Gemini lab. It solves direct, first-party experimentation with Google's Gemini models and Google-native app integrations. What you remove is the habit of using Lovable or Claude Cowork to guess what Gemini can do.</p></details>
+      <details><summary>Default workflow</summary><p>Claude Cowork decides priority. Lovable drafts the web product. Codex audits and hardens code. Google AI Studio enters only when Gemini-specific capability is the point.</p></details>
+      <details><summary>Complexity test</summary><p>Before adding a tool to the regular stack, ask: What does this solve that the current stack cannot? What are we removing or narrowing to make room for it?</p></details>
+    </section>
+
+    <footer>Sources: Google AI Studio and Gemini API docs, OpenAI Codex manual fetched June 10, 2026, Lovable docs, and Greg Borden Inc. local organization files. Published via GitHub Pages.</footer>
+  </main>
+
+  <script>
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const cards = document.querySelectorAll('#cards .card');
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        filterButtons.forEach((b) => b.classList.toggle('active', b === button));
+        cards.forEach((card) => {
+          const show = filter === 'all' || card.dataset.tags.includes(filter);
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    const answers = {
+      gemini: ['Use Google AI Studio', 'This is the right surface for Gemini model tests, multimodal experiments, API-key-backed code snippets, and Google-native prototypes. Keep it bounded to Gemini capability work.'],
+      web: ['Use Lovable first', 'Lovable is the fastest way to get a web product visible. After the draft works, bring Codex in to inspect the repo, test behavior, and name technical debt.'],
+      hardening: ['Use Codex', 'Codex should own correctness work: repo reading, file edits, terminal checks, tests, review, debugging, and maintainability cleanup.'],
+      strategy: ['Use Claude Cowork', 'Claude Cowork is the memory and operating layer: board routing, journal, decision log, pending items, and project continuity.']
+    };
+    const answerBox = document.getElementById('answer');
+    document.querySelectorAll('[data-answer]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const [title, body] = answers[button.dataset.answer];
+        answerBox.innerHTML = `<h3>${title}</h3><p>${body}</p>`;
+      });
+    });
+  </script>
+</body>
+</html>
